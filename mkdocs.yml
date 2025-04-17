@@ -70,6 +70,7 @@ plugins:
   - search
   - markdownextradata
   - awesome-pages
+  - quizdown
 
 # css
 extra_css:
@@ -78,6 +79,8 @@ extra_css:
 # javascript
 extra_javascript:
   - assets/javascripts/extra.js
+  - assets/javascripts/quizdown.js
+  - assets/javascripts/quizdown_init.js
 
 # Copyright message
 copyright: Copyright &copy; Certificaciones Unir - 2025
