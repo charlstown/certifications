@@ -13,7 +13,7 @@ shuffleAnswers: true
 # 1. ¿Cuál de los siguientes servicios proporciona un entorno para crear, entrenar y desplegar modelos de machine learning en Azure?
 
 1. [ ] Azure Cognitive Services  
-2. [ ] Azure Bot Services  
+2. [x] Azure Bot Services  
 3. [x] Azure Machine Learning  
 4. [ ] Azure Synapse Analytics  
 
