@@ -1,29 +1,34 @@
-# Certificaciones UNIR
+# Certificaciones
 
 [![mkdocs](https://img.shields.io/badge/mkdocs-1.4-blue)](https://www.mkdocs.org/)
 [![template](https://img.shields.io/badge/template-material-dd2e57)](https://squidfunk.github.io/mkdocs-material/)
 [![license](https://img.shields.io/badge/license-MIT-green.svg?logo=cachet&style=flat&logoColor=green)](LICENSE)
 
-**Cuaderno de notas** para preparar las certificaciones **AZ-900** y **AWS Fundamentals** del curso **DevOps** de UNIR.
+🧠 Apuntes y tests para preparar certificaciones de **Azure** y **AWS**, actualizados a **2025**.  
+Diseñado para estudiar de forma directa, visual y enfocada en el examen real.
 
-## Instalación
+## ✨ ¿Qué contiene este repositorio?
 
-Necesitas tener `mkdocs` instalado:
+- ✔️ **Resumenes y apuntes claros** para los exámenes fundamentales (AZ-900, AWS CCP...).
+- 🎯 **Tests interactivos** basados en preguntas reales de examen.
+- 📅 Contenido actualizado al año **2025**.
+- 🛠️ Documentación generada con [**Mecadocs**](https://mecadocs.dev) + **Material for MkDocs** para una experiencia de lectura impecable.
+- 🚀 Publicado con **GitHub Pages** para acceso rápido desde cualquier dispositivo.
 
-```bash
-pip install mkdocs-material
-```
+## 🔗 Accede a la documentación
 
-Para iniciar el servidor local:
+Toda la documentación está publicada aquí:  
+👉 **[charlstown.github.io/certifications](https://charlstown.github.io/certifications/)**
 
-```bash
-mkdocs serve
-```
+## 🧪 ¿Cómo funcionan los tests?
 
-## Uso
+Los tests están creados con el plugin **Quizdown**:  
+📘 [Ver sintaxis de preguntas](https://github.com/bonartm/quizdown-js/blob/main/docs/syntax.md)
 
-Edita los archivos Markdown en la carpeta `docs/` y visualiza los cambios en `http://localhost:8000`.
+Puedes practicar directamente en la web, con respuestas inmediatas y diseño responsive.
 
-## Licencia
+---
 
-MIT.
+## 📥 ¿Contribuyes?
+
+Pull requests y sugerencias son siempre bienvenidas 🙌  

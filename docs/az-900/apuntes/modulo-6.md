@@ -1,4 +1,4 @@
-# M6 Precios y ciclo de vida
+# M6 - Precios y ciclo de vida
 
 ## 1. Planificación y gestión de costes
 
@@ -20,6 +20,7 @@
 Nos ayuda a estimar el coste de los productos de Azure.
 
 Permite configurar:
+
 - Región
 - Opciones de facturación
 - Soporte
@@ -37,6 +38,7 @@ Permite comparar costes de infraestructura local Vs. Nube.
 Servicio de Azure que permite gestionar y consultar la información de costes de nuestros recursos.
 
 Ofrece:
+
 - Crear informes de facturación
 - Fijar presupuestos
 - Alertas
@@ -98,6 +100,3 @@ Para elevar el SLA necesitamos usar despliegues multi-AZ o redundantes (varias r
 | Developer           | 30$    | Guias de arquitectura                                                  |
 | Standard            | 100$   | Soporte por gravedad mejora por nivel.                                 |
 | Professional Direct | 1000$  | Grupos de expertos de arquitectura y operaciones y formación gratuita. |
-### Ciclo de vida de servicios en Azure
-
-### Planes de soporte

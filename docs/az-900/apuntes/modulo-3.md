@@ -1,6 +1,6 @@
-# M3 Soluciones principales
+# M3 - Soluciones principales
 
-## Tema 1: Soluciones principales
+## 1. Soluciones principales
 
 ### IoT (Internet of Things)
 
@@ -31,7 +31,6 @@ Dispositivos convencionales que recopilan y envían constantemente información 
     - **HDInsight**: si ves tecnologías específicas como Hadoop, Spark o Kafka, esta es la respuesta. Suele usarse para mantener compatibilidad con herramientas Big Data ya existentes.
     - **Databricks**: si la pregunta menciona ciencia de datos colaborativa, notebooks o entrenamiento de modelos Spark, apunta a esta.
 
-
 ### Inteligencia Artificial
 
 | Servicio                   | Tipo       | Descripción                                                                 |
@@ -45,7 +44,6 @@ Dispositivos convencionales que recopilan y envían constantemente información 
     - **Azure Machine Learning**: si ves una pregunta sobre entrenar un modelo personalizado, elegir este.
     - **Cognitive Services**: importante: son APIs preentrenadas, no necesitas datos ni entrenamiento. En preguntas sobre visión por computadora, análisis de texto, voz o traducción automática, suelen ir por aquí.
     - **Bot Service**: si ves una opción que implica interacción con usuarios y texto hablado o escrito, esta es la correcta. Puede integrarse con Cognitive Services para tener respuestas inteligentes.
-
 
 ### Serverless Computing
 
@@ -62,7 +60,6 @@ Modelo en el que no gestionas la infraestructura, solo te centras en el código 
     - **Functions** es más para desarrolladores (código).
     - **Logic Apps** es más visual y orientado a usuarios no técnicos.
 
-
 ### DevOps
 
 | Servicio               | Tipo       | Descripción                                                                 |
@@ -77,7 +74,7 @@ Modelo en el que no gestionas la infraestructura, solo te centras en el código 
     - **GitHub Actions**: si aparece una pregunta que menciona GitHub directamente, esta será la opción CI/CD correcta. Cada vez más usada, pero **Azure DevOps sigue siendo más completo** en funcionalidades.
     - **DevTest Labs**: cuidado con preguntas sobre **optimizar costes en entornos de desarrollo y pruebas**. Este servicio permite autoapagado de máquinas y límites por usuario, suele aparecer como trampa frente a una VM suelta.
 
-## Tema 2 Herramientas de administración
+## 2. Herramientas de administración
 
 ### Herramientas de administración I
 

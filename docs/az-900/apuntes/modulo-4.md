@@ -1,5 +1,4 @@
-
-# M4 Seguridad
+# M4 - Seguridad
 
 ## 1. Seguridad en Azure
 
@@ -15,6 +14,7 @@ Servicio de supervisión (el antivirus) dentro de Azure y en los CPDs.
 _Se integra con Azure Advisor._
 
 ### Sentinel
+
 Herramienta SOAR (Security Orchestration and Response) que nos ayuda a tratar con amenazas.
 
 - Recopila logs
@@ -25,7 +25,6 @@ Herramienta SOAR (Security Orchestration and Response) que nos ayuda a tratar co
 Almacen de secretos en la nube. Se puede realizar una petición get HTTP para cargar un secreto o con SDK.
 
 - Generación de claves en plan premium
-
 
 ### Host dedicados
 
@@ -74,12 +73,9 @@ Filtran el tráfico de la red hacia y desde los recursos de Azure en redes virtu
 
 Se trata de un servicio con estado administrado totalmente por Azure, permitiendo o denegando el acceso de la dirección IP, origen o destino.
 
-
-```ad-info
-title: Azure Application Gateway
+!!! info "Azure Application Gateway"
 
 Es un SaaS que permite exponer una única URL a internet y con un proxy inverso redirigir el tráfico.
-```
 
 ### Protección frente a DDoS
 

@@ -1,4 +1,4 @@
-site_name: Certificaciones Unir
+site_name: Certificaciones Azure-AWS
 site_description: Cuaderno de notas para las certificaciones AZ-900 y AWS Fundamentals del curso DevOps de UNIR.
 repo_url: https://github.com/charlstown/unir-certifications
 site_author: charlstown
@@ -83,7 +83,7 @@ extra_javascript:
   - assets/javascripts/quizdown_init.js
 
 # Copyright message
-copyright: Copyright &copy; Certificaciones Unir - 2025
+copyright: Copyright &copy; Carlos Grande - 2025
 
 # Global variables
 extra:

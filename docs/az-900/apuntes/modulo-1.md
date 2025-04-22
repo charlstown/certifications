@@ -1,6 +1,6 @@
-# M1 Conceptos básicos
+# M1 - Conceptos básicos
 
-## Tema 1: Modelos de nube
+## 1. Modelos de nube
 
 ### Qué son
 
@@ -45,7 +45,7 @@ Modelo que combina nubes públicas y privadas, permitiendo la interoperabilidad 
 
 **Uso habitual:** recomendada cuando se necesita mantener ciertos datos sensibles en local pero aprovechar la escalabilidad de la nube pública.
 
-## Tema 2: Beneficios y consideraciones
+## 2. Beneficios y consideraciones
 
 |     | Beneficio               | Descripción                         |
 | --- | ----------------------- | ----------------------------------- |
@@ -85,7 +85,7 @@ Es un modelo de pago en el que solo se abona por los recursos que se utilizan, s
 - **Flexibilidad:** permite ajustar los recursos según la demanda en tiempo real.
 - **Reducción de riesgos:** menor inversión inicial y más control sobre los costes operativos.
 
-## Tema 3: Servicios en la nube
+## 3. Servicios en la nube
 
 ### IaaS (Infrastructure as a Service)
 

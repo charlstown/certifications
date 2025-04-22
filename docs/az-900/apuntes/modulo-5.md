@@ -1,4 +1,4 @@
-# M5 Gobierno
+# M5 - Gobierno
 
 ## 1. Servicio principales identidad Azure
 
@@ -17,6 +17,7 @@ Autenticación mediante MFA de Azure. Proporciona seguridad adicional.
 Active Directory es el servicio de administración de identidad y acceso basado en la nube de Microsoft.
 
 Proporciona:
+
 - Autenticación
 - Inicio de sesión único
 - Administración de apps
@@ -27,6 +28,7 @@ Proporciona:
 Un sistema de Azure AD que reune señales, toma decisiones y aplica directivas de la organización referentes a la autenticación.
 
 Señales:
+
 - Usuario y/o grupo
 - Ubicación de la IP
 - Dispositivo o aplicación
@@ -43,6 +45,7 @@ Acceso específico a recursos utilizando un rol. Permite la separación de tarea
 Podemos proteger recursos de Azure de la eliminación o modificación  accidental.
 
 Activación:
+
 - A nivel suscripción para todos los recursos
 - A nivel grupo (RG)
 - A nivel individual
@@ -56,6 +59,7 @@ No tienen una funcionalidad técnica, nos sirve para generar taxonomías en pare
 Ayuda a cumplir los estándares que una organización haya definido a la hora de gestionar los recursos de las suscripciones.
 
 Tipos:
+
 - Deny
 - Audit
 - Audit-if-not-exist
@@ -98,5 +102,6 @@ La declaración de privacidad de Microsoft proporciona información acerca de c�
 ### Regiones Soberanas
 
 Regiones físicamente separadas de otras de uso público, destinadas al gobierno de algunos países.
+
 - Azure china
 - Azure Goverment

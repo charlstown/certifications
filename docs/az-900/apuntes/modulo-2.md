@@ -1,6 +1,6 @@
-# M2 Servicios principales
+# M2 - Servicios principales
 
-## Tema 1: Componentes Arquitectónicos principales Azure
+## 1. Componentes Arquitectónicos principales Azure
 
 ### Arquitectura global Azure
 
@@ -35,7 +35,7 @@ Permiten mantener las aplicaciones disponibles durante ventanas de mantenimiento
 | **Grupos de administración**  | Contenedores que agrupan suscripciones para aplicar políticas comunes     | Facilitan la gobernanza y el control a gran escala en múltiples suscripciones.    |
 | **Azure Portal**              | Interfaz web gráfica para interactuar con los servicios de Azure          | Permite gestionar recursos, ver métricas, configurar alertas, etc.                |
 
-## Tema 2: Productos principales de carga de trabajo Azure 14
+## 2. Productos principales de carga de trabajo Azure 14
 
 ### Servicios de cómputo
 
@@ -108,3 +108,52 @@ Azure Marketplace es una plataforma en la que puedes **descubrir, probar y adqui
 - **Contenedores**, plantillas ARM y servicios gestionados
 
 Permite desplegar soluciones listas para usar con unos pocos clics, muchas de ellas con soporte oficial del proveedor.
+
+### Políticas de redundancia de backup en Azure
+
+Azure Backup permite elegir entre diferentes opciones de redundancia para almacenar los datos en los cofres de Recovery Services. Esta configuración afecta al nivel de durabilidad, coste y resiliencia frente a fallos.
+
+| Opción    | Copias                              | Región secundaria | Lectura desde región secundaria | Coste       | Soportado por Azure Backup |
+|-----------|-------------------------------------|-------------------|----------------------------------|-------------|-----------------------------|
+| LRS       | 3 copias en un datacenter           | No                | No                               | Bajo        | Sí                          |
+| ZRS       | 3 copias en zonas de una región     | No                | No                               | Medio       | Parcial (según servicio)    |
+| GRS       | 3 copias + réplica geográfica       | Sí (asíncrona)    | No                               | Alto        | Sí                          |
+| RA-GRS    | 3 copias + réplica geográfica       | Sí (asíncrona)    | Sí                               | Más alto    | No                          |
+| GZRS      | Copias en zonas + réplica geográfica| Sí (asíncrona)    | No                               | Alto        | No                          |
+| RA-GZRS   | Zonas + réplica geográfica          | Sí (asíncrona)    | Sí                               | Más alto    | No                          |
+
+#### LRS - Locally Redundant Storage
+
+Replica los datos tres veces dentro de una única región física (mismo datacenter).  
+Es la opción más económica, pero no protege frente a desastres regionales.  
+Adecuado cuando el coste es prioritario y la pérdida de datos regionales es aceptable.
+
+#### ZRS - Zone-Redundant Storage
+
+Replica sincrónicamente los datos entre tres zonas de disponibilidad dentro de una misma región.  
+Ofrece alta disponibilidad frente a fallos zonales.  
+No siempre está disponible en servicios de backup. Verificar soporte actualizado.
+
+#### GRS - Geo-Redundant Storage
+
+Replica los datos tres veces en la región primaria y los copia de forma asíncrona a una región secundaria geográfica.  
+Aporta alta durabilidad incluso en escenarios de desastre regional.  
+Es la opción recomendada por defecto en la mayoría de escenarios críticos de backup.
+
+#### RA-GRS - Read-Access Geo-Redundant Storage
+
+Igual que GRS, pero permite el acceso de solo lectura a los datos desde la región secundaria.  
+Aporta disponibilidad de lectura adicional en caso de fallo en la región principal.  
+Azure Backup no admite esta opción; solo están disponibles LRS y GRS.
+
+#### GZRS - Geo-Zone-Redundant Storage
+
+Combina replicación entre zonas dentro de la región primaria con replicación geográfica a una región secundaria.  
+Diseñado para alta disponibilidad local más recuperación ante desastres regionales.  
+No disponible actualmente en Azure Backup.
+
+#### RA-GZRS - Read-Access Geo-Zone-Redundant Storage
+
+Extiende GZRS permitiendo lectura desde la región secundaria.  
+Ofrece máxima durabilidad y disponibilidad.  
+No soportado por Azure Backup.
