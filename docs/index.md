@@ -1,6 +1,6 @@
 ---
 template: home.html
-title: Certificaciones Unir
+title: Certificaciones
 hide:
     - toc
     - nav
@@ -12,7 +12,7 @@ Welcome to the ultimate destination for all things! This website is a veritable 
 
 </br>
 
-[Discover Certificaciones Unir](#){ .md-button }
+[Discover Certificaciones](#){ .md-button }
 
 ---
 
