@@ -1,6 +1,6 @@
-# Módulo 2 - Servicios principales
+# M2 - Servicios principales
 
-Test de 10 preguntas relacionadas con el [módulo 2](../apuntes/modulo-2.md) de servicios principales en Azure.
+Test de 14 preguntas relacionadas con el [módulo 2](../apuntes/modulo-2.md) de servicios principales en Azure.
 
 !!! info ""
 
@@ -85,11 +85,36 @@ shuffleAnswers: true
 2. Contiene el código de prácticas 27018.
 3. Tiene el marco de seguridad cibernética.
 
-## Ordena cada término de cumplimiento para que coincida con sus características: 1 - Azure Virtual Network, 2 - VPN gateway, 3 - Azure Application Gateway, 4 - Content Delivery Network.
+## Ordena cada término de cumplimiento para que coincida con sus características: 1 - Azure Virtual Network, 2 - VPN gateway, 3 - Azure Application Gateway, 4 - Content Delivery Network
 
 1. Permite que las máquinas virtuales de Azure se comuniquen entre sí de forma segura.
 2. Se utiliza para enviar tráfico cifrado hacia y desde una ubicación local.
 3. Permite la gestión del tráfico a las aplicaciones web.
 4. Ayuda a minimizar la latencia.
+
+## Ordena cada servicio de base de datos para que coincida con sus características: 1 - CosmosDB, 2 - Az SQL Database, 3 - Azure Migration Service, 4 - Azure SQL Datawarehouse
+
+1. Admite datos sin esquema y permite aplicaciones siempre activas y altamente receptivas.
+2. Un servicio de base de datos relacional utilizado para aplicaciones y sitios web basados en datos.
+3. Permite el movimiento de datos desde múltiples fuentes a plataformas de datos de Azure.
+4. Utilizado para análisis empresarial.
+
+## Ordena cada servicio de almacenamiento para que coincida con sus características: 1 - Blob storage, 2 - Archive Storage
+
+1. Datos no estructurados que pueden transmitir gigabytes de datos a la vez.
+2. Un método de almacenamiento de bajo costo y alta latencia.
+
+## Ordena cada servicio serverless para que coincida con sus características: 1 - Azure functions, 2 - Azure Logic Apps, 3 - Azure Event Grid
+
+1. Se usa cuando el código es una preocupación, no la infraestructura subyacente.
+2. Se utiliza para automatizar tareas y procesos comerciales para la integración.
+3. Es un servicio de enrutamiento que utiliza un modelo de publicación-suscripción.
+
+## ¿Qué opción de almacenamiento de Azure es la más adecuada para almacenar vídeos y archivos binarios?
+
+1. [x] Azure Blob Storage
+2. [ ] Azure Table Storage
+3. [ ] Azure Queue Storage
+4. [ ] Azure File Storage
 
 :::

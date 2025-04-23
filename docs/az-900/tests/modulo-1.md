@@ -1,4 +1,4 @@
-# Módulo 1 - Conceptos básicos
+# M1 - Conceptos básicos
 
 Test de 13 preguntas relacionadas con el [módulo 1](../apuntes/modulo-1.md) de conceptos básicos en Azure.
 
