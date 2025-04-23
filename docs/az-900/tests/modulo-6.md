@@ -50,7 +50,7 @@ shuffleAnswers: true
 ## Una suscripción de Azure de oferta está disponible para los miembros de [pago por uso]
 
 1. [ ] No se necesita ningún cambio
-2. [ ] Microsoft Visual Studio
+2. [x] Microsoft Visual Studio
 3. [ ] Cuenta gratis
 4. [ ] Prueba de Azure
 
