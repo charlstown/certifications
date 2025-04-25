@@ -21,7 +21,7 @@ Apuntes y tests para preparar certificaciones de **Azure** y **AWS**, actualizad
 
     [:octicons-arrow-right-24: Acceder](./az-900/index.md)
 
-- :fontawesome-brands-aws: __AWS Fundamentals__
+- :fontawesome-brands-aws: __AWS Cloud Practitioner__
 
     ---
 
