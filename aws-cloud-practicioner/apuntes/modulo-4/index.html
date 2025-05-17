@@ -1,0 +1,1962 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cuaderno de notas para las certificaciones AZ-900 y AWS Fundamentals del curso DevOps de UNIR.">
+      
+      
+        <meta name="author" content="charlstown">
+      
+      
+      
+        <link rel="prev" href="../modulo-3/">
+      
+      
+        <link rel="next" href="../../tests/examen/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>M4 - Facturación, precios y soporte - Certificaciones Azure-AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#servicios-de-computo-en-aws" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-header__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificaciones Azure-AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M4 - Facturación, precios y soporte
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../az-900/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AZ 900
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AWS Cloud Practicioner
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-nav__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    Certificaciones Azure-AWS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../az-900/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AZ 900
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AZ 900
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AWS Cloud Practicioner
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Cloud Practicioner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios cómputo y almacenamiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    M4 - Facturación, precios y soporte
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Facturación, precios y soporte
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-computo-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Cómputo en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-almacenamiento-y-bases-de-datos-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Almacenamiento y Bases de Datos en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-control-y-gobernanza-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Control y Gobernanza en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-seguridad-y-gestion-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Seguridad y Gestión en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-analytics-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Analytics en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-de-aplicaciones-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración de Aplicaciones en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-de-desarrollo-y-devops-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas de Desarrollo y DevOps en AWS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Seguridad y cumplimiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/test-ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test de ejemplo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-computo-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Cómputo en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-almacenamiento-y-bases-de-datos-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Almacenamiento y Bases de Datos en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-control-y-gobernanza-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Control y Gobernanza en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-seguridad-y-gestion-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Seguridad y Gestión en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicios-de-analytics-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Analytics en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracion-de-aplicaciones-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración de Aplicaciones en AWS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-de-desarrollo-y-devops-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas de Desarrollo y DevOps en AWS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="m4-facturacion-precios-y-soporte">M4 - Facturación, precios y soporte<a class="headerlink" href="#m4-facturacion-precios-y-soporte" title="Permanent link">&para;</a></h1>
+<h3 id="servicios-de-computo-en-aws">Servicios de Cómputo en AWS<a class="headerlink" href="#servicios-de-computo-en-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+<th>Casos de uso principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon EC2</strong></td>
+<td>Proporciona <strong>capacidad de cómputo escalable</strong> en forma de máquinas virtuales.</td>
+<td>Despliegue de aplicaciones, servidores web, bases de datos.</td>
+</tr>
+<tr>
+<td><strong>Amazon EC2 Auto Scaling</strong></td>
+<td>Permite <strong>ajustar automáticamente</strong> la cantidad de instancias EC2 en función de la demanda.</td>
+<td>Mantener alta disponibilidad, escalabilidad automática.</td>
+</tr>
+<tr>
+<td><strong>Amazon ECS</strong></td>
+<td>Servicio de <strong>gestión de contenedores</strong> compatible con Docker, altamente escalable.</td>
+<td>Orquestación de contenedores, microservicios.</td>
+</tr>
+<tr>
+<td><strong>Amazon ECR</strong></td>
+<td><strong>Registro gestionado de imágenes Docker</strong>, facilita almacenar, administrar e implementar contenedores.</td>
+<td>Almacenamiento y despliegue de imágenes de contenedores.</td>
+</tr>
+<tr>
+<td><strong>AWS Elastic Beanstalk</strong></td>
+<td>Servicio PaaS para <strong>implementar y escalar aplicaciones web</strong> rápidamente sin gestionar la infraestructura.</td>
+<td>Aplicaciones web en servidores como Apache o IIS.</td>
+</tr>
+<tr>
+<td><strong>AWS Lambda</strong></td>
+<td>Servicio <strong>serverless</strong> para ejecutar código en respuesta a eventos, sin necesidad de gestionar servidores.</td>
+<td>Automatización, APIs, procesamiento de eventos.</td>
+</tr>
+<tr>
+<td><strong>Amazon EKS</strong></td>
+<td>Servicio de <strong>gestión de clústeres Kubernetes</strong> totalmente administrado.</td>
+<td>Orquestación de contenedores con Kubernetes.</td>
+</tr>
+<tr>
+<td><strong>AWS Fargate</strong></td>
+<td>Motor informático <strong>serverless para contenedores</strong>. Permite ejecutar contenedores sin gestionar servidores o clústeres.</td>
+<td>Ejecución de microservicios en contenedores sin preocuparse por la infraestructura.</td>
+</tr>
+<tr>
+<td><strong>AWS Serverless Application Repository</strong></td>
+<td>Permite <strong>descubrir, implementar y publicar aplicaciones serverless</strong>.</td>
+<td>Reutilización de aplicaciones sin servidor, aceleración del desarrollo.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de AWS permite ejecutar contenedores sin necesidad de gestionar servidores o clústeres?</p>
+<p>→ <strong>AWS Fargate</strong>.</p>
+</div>
+<h3 id="servicios-de-almacenamiento-y-bases-de-datos-en-aws">Servicios de Almacenamiento y Bases de Datos en AWS<a class="headerlink" href="#servicios-de-almacenamiento-y-bases-de-datos-en-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+<th>Casos de uso principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon EBS</strong></td>
+<td>Almacenamiento <strong>persistente en bloques</strong> para instancias EC2.</td>
+<td>Volúmenes de discos para EC2, almacenamiento de bases de datos.</td>
+</tr>
+<tr>
+<td><strong>Amazon S3</strong></td>
+<td>Almacenamiento <strong>de objetos</strong> altamente escalable y accesible mediante URL.</td>
+<td>Almacenamiento de archivos, backups, hosting de contenido estático.</td>
+</tr>
+<tr>
+<td><strong>Clases de Amazon S3</strong></td>
+<td>- <strong>S3 Estándar</strong>: Acceso frecuente. - <strong>S3 Intelligent-Tiering</strong>: Acceso con patrones variables. - <strong>S3 Estándar - IA</strong>: Acceso poco frecuente. - <strong>S3 One Zone - IA</strong>: Acceso poco frecuente en una sola AZ. - <strong>S3 Glacier</strong>: Archivado a largo plazo. - <strong>S3 Glacier Deep Archive</strong>: Archivado de muy largo plazo.</td>
+<td>Gestión de datos por frecuencia de acceso, optimización de costes.</td>
+</tr>
+<tr>
+<td><strong>Amazon EFS</strong></td>
+<td>Sistema de archivos <strong>compartido</strong> y elástico, accesible desde múltiples instancias EC2 mediante NFS.</td>
+<td>Almacenamiento compartido entre aplicaciones, directorios de usuarios.</td>
+</tr>
+<tr>
+<td><strong>Amazon RDS</strong></td>
+<td>Servicio gestionado de <strong>bases de datos relacionales</strong>.</td>
+<td>Aplicaciones que requieren bases de datos SQL (MySQL, PostgreSQL, Oracle, SQL Server, Aurora).</td>
+</tr>
+<tr>
+<td><strong>Amazon DynamoDB</strong></td>
+<td>Base de datos <strong>NoSQL rápida y totalmente gestionada</strong>, con baja latencia en milisegundos.</td>
+<td>Aplicaciones de alta demanda, juegos, IoT, almacenamiento de sesiones.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de AWS permite almacenar archivos en forma de objetos y acceder a ellos mediante URL?</p>
+<p>→ <strong>Amazon S3</strong>.</p>
+</div>
+<h3 id="servicios-de-control-y-gobernanza-en-aws">Servicios de Control y Gobernanza en AWS<a class="headerlink" href="#servicios-de-control-y-gobernanza-en-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+<th>Casos de uso principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Cost Explorer</strong></td>
+<td>Permite <strong>visualizar y gestionar los costes y uso de AWS</strong> a través de informes interactivos.</td>
+<td>Análisis de costes, identificación de tendencias de gasto.</td>
+</tr>
+<tr>
+<td><strong>AWS Budgets</strong></td>
+<td>Servicio para <strong>gestionar presupuestos</strong> y generar alertas mediante <strong>Amazon SNS</strong> al superar ciertos umbrales de gasto.</td>
+<td>Control de presupuestos, alertas proactivas de costes.</td>
+</tr>
+<tr>
+<td><strong>AWS Cost &amp; Usage Report</strong></td>
+<td>Proporciona <strong>informes detallados de uso y costes</strong> a nivel de cuenta u organización, con desglose por hora, día o mes.</td>
+<td>Auditorías de costes, análisis de facturación detallada.</td>
+</tr>
+<tr>
+<td><strong>Amazon CloudWatch</strong></td>
+<td>Servicio de <strong>monitoreo de recursos y aplicaciones</strong>. Permite crear alarmas, visualizar métricas y responder a eventos en tiempo real.</td>
+<td>Supervisión de rendimiento, automatización basada en métricas.</td>
+</tr>
+<tr>
+<td><strong>AWS CloudTrail</strong></td>
+<td>Realiza un <strong>seguimiento de la actividad de los usuarios y del uso de la API</strong> de AWS.</td>
+<td>Auditorías de seguridad, análisis de eventos y actividades sospechosas.</td>
+</tr>
+<tr>
+<td><strong>AWS Config</strong></td>
+<td>Permite realizar un <strong>seguimiento de los recursos de AWS y sus cambios de configuración</strong>.</td>
+<td>Auditorías de cumplimiento, inventario de recursos.</td>
+</tr>
+<tr>
+<td><strong>AWS Auto Scaling</strong></td>
+<td>Ajusta de forma automática la capacidad de los recursos para <strong>mantener un rendimiento estable</strong> al menor coste.</td>
+<td>Optimización de recursos, escalabilidad de aplicaciones.</td>
+</tr>
+<tr>
+<td><strong>Amazon EC2 Auto Scaling</strong></td>
+<td>Ajusta automáticamente la cantidad de <strong>instancias EC2</strong> en función de la demanda para garantizar la disponibilidad.</td>
+<td>Alta disponibilidad y optimización de costes en EC2.</td>
+</tr>
+<tr>
+<td><strong>Elastic Load Balancing</strong></td>
+<td>Distribuye automáticamente el <strong>tráfico de red y de aplicaciones entre múltiples destinos</strong>.</td>
+<td>Balanceo de carga, alta disponibilidad de aplicaciones web.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de AWS permite realizar un seguimiento de la actividad de los usuarios y llamadas a la API?</p>
+<p>→ <strong>AWS CloudTrail</strong>.</p>
+</div>
+<h3 id="servicios-de-seguridad-y-gestion-en-aws">Servicios de Seguridad y Gestión en AWS<a class="headerlink" href="#servicios-de-seguridad-y-gestion-en-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+<th>Casos de uso principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon GuardDuty</strong></td>
+<td>Servicio de <strong>detección de amenazas</strong> que analiza registros de AWS para identificar actividades maliciosas.</td>
+<td>Detección proactiva de amenazas, análisis de logs de seguridad.</td>
+</tr>
+<tr>
+<td><strong>Amazon Inspector</strong></td>
+<td><strong>Evalúa la seguridad de las instancias EC2</strong> y aplicaciones, buscando vulnerabilidades.</td>
+<td>Análisis de vulnerabilidades, comprobación de configuraciones de seguridad.</td>
+</tr>
+<tr>
+<td><strong>Amazon Macie</strong></td>
+<td>Utiliza <strong>machine learning para proteger datos confidenciales</strong> almacenados en S3.</td>
+<td>Identificación de datos personales o sensibles, protección de información.</td>
+</tr>
+<tr>
+<td><strong>AWS Artifact</strong></td>
+<td>Proporciona acceso a <strong>informes de conformidad y seguridad</strong> de AWS.</td>
+<td>Auditorías de seguridad, gestión de cumplimiento normativo.</td>
+</tr>
+<tr>
+<td><strong>AWS Certificate Manager</strong></td>
+<td>Servicio para <strong>gestionar certificados SSL/TLS</strong>, facilitando la creación, renovación y despliegue.</td>
+<td>Cifrado de comunicaciones, gestión de certificados digitales.</td>
+</tr>
+<tr>
+<td><strong>AWS Secrets Manager</strong></td>
+<td>Servicio para <strong>gestionar credenciales y secretos</strong> de forma segura.</td>
+<td>Almacenamiento seguro de contraseñas, tokens de API, claves de bases de datos.</td>
+</tr>
+<tr>
+<td><strong>AWS Shield</strong></td>
+<td>Protección automática contra <strong>ataques DDoS</strong>. Incluye una versión básica gratuita y otra avanzada.</td>
+<td>Protección contra denegación de servicio, mitigación de ataques en aplicaciones web.</td>
+</tr>
+<tr>
+<td><strong>Amazon Cognito</strong></td>
+<td>Gestión de <strong>identidades y acceso de usuarios</strong> en aplicaciones web y móviles.</td>
+<td>Autenticación de usuarios, control de acceso con SSO y federación de identidades.</td>
+</tr>
+<tr>
+<td><strong>AWS Amplify</strong></td>
+<td>Conjunto de herramientas para <strong>desarrollo de aplicaciones frontend</strong> web y móviles con marcos como React, Angular y Vue.</td>
+<td>Desarrollo de aplicaciones modernas con autenticación, APIs y almacenamiento.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de AWS permite gestionar y almacenar de forma segura contraseñas y claves de acceso?</p>
+<p>→ <strong>AWS Secrets Manager</strong>.</p>
+</div>
+<h3 id="servicios-de-analytics-en-aws">Servicios de Analytics en AWS<a class="headerlink" href="#servicios-de-analytics-en-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+<th>Casos de uso principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Athena</strong></td>
+<td>Permite <strong>consultar directamente datos en S3</strong> usando <strong>SQL estándar</strong> sin necesidad de cargar los datos en una base de datos.</td>
+<td>Análisis ad-hoc sobre grandes volúmenes de datos en S3, consultas rápidas sin ETL.</td>
+</tr>
+<tr>
+<td><strong>Amazon EMR</strong></td>
+<td>Plataforma de <strong>Big Data totalmente gestionada</strong> que permite procesar grandes volúmenes de datos utilizando frameworks como <strong>Apache Spark, Hive, Hadoop, Presto</strong>.</td>
+<td>Procesamiento de grandes datasets, machine learning, análisis de logs.</td>
+</tr>
+<tr>
+<td><strong>Amazon Kinesis</strong></td>
+<td>Servicio completamente gestionado para <strong>procesamiento y análisis de datos en tiempo real</strong>. Permite capturar, procesar y analizar flujos de datos a escala.</td>
+<td>Análisis de clics en tiempo real, detección de fraudes, monitoreo en vivo.</td>
+</tr>
+<tr>
+<td><strong>Amazon QuickSight</strong></td>
+<td>Herramienta de <strong>Business Intelligence sin servidor</strong> que permite crear paneles y reportes interactivos de forma rápida.</td>
+<td>Visualización de datos, creación de dashboards empresariales, análisis interactivos.</td>
+</tr>
+<tr>
+<td><strong>AWS Glue</strong></td>
+<td>Servicio de <strong>integración de datos y ETL gestionado</strong>, que permite preparar, transformar y mover datos de forma sencilla. Basado en código (Spark y Python).</td>
+<td>Integraciones ETL, catálogos de datos, transformación y limpieza de datos antes del análisis.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de AWS permite realizar consultas directas sobre datos en S3 usando SQL sin necesidad de mover los datos?</p>
+<p>→ <strong>Amazon Athena</strong>.</p>
+</div>
+<h3 id="integracion-de-aplicaciones-en-aws">Integración de Aplicaciones en AWS<a class="headerlink" href="#integracion-de-aplicaciones-en-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+<th>Casos de uso principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Step Functions</strong></td>
+<td>Permite <strong>orquestar flujos de trabajo</strong> de forma visual, facilitando la secuenciación de tareas, especialmente con <strong>AWS Lambda</strong> y otros servicios.</td>
+<td>Automatización de procesos, flujos de datos entre servicios, microservicios coordinados.</td>
+</tr>
+<tr>
+<td><strong>Amazon MQ</strong></td>
+<td>Servicio de <strong>mensajería gestionado</strong> compatible con <strong>Apache ActiveMQ y RabbitMQ</strong>. Facilita la migración de aplicaciones que usan protocolos de mensajería estándar.</td>
+<td>Integración de sistemas legacy, migración de entornos on-premises, mensajería empresarial.</td>
+</tr>
+<tr>
+<td><strong>Amazon SQS</strong></td>
+<td>Servicio de <strong>colas de mensajes completamente gestionado</strong> para desacoplar componentes de aplicaciones y escalar de forma independiente.</td>
+<td>Procesamiento asíncrono, desacoplamiento de microservicios, colas de trabajo.</td>
+</tr>
+<tr>
+<td><strong>Amazon SNS</strong></td>
+<td>Servicio de <strong>notificaciones push y mensajería</strong>. Permite enviar mensajes a <strong>móviles, correo electrónico, SMS, HTTP/S</strong> y activar otros servicios como Lambda.</td>
+<td>Envío de alertas, notificaciones de eventos, difusión de mensajes a múltiples suscriptores.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de AWS permite coordinar la ejecución de varios servicios a través de flujos de trabajo visuales?</p>
+</div>
+<p>→ <strong>AWS Step Functions</strong>.</p>
+<h3 id="herramientas-de-desarrollo-y-devops-en-aws">Herramientas de Desarrollo y DevOps en AWS<a class="headerlink" href="#herramientas-de-desarrollo-y-devops-en-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+<th>Casos de uso principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS CodeCommit</strong></td>
+<td>Servicio para <strong>alojar repositorios privados basados en Git</strong> de forma segura y escalable.</td>
+<td>Control de versiones, colaboración en equipos de desarrollo, almacenamiento de código fuente.</td>
+</tr>
+<tr>
+<td><strong>AWS CodeBuild</strong></td>
+<td>Servicio de <strong>integración continua</strong> que compila código fuente, ejecuta pruebas y genera paquetes listos para despliegue.</td>
+<td>Automatización de compilaciones, pruebas unitarias, generación de artefactos de despliegue.</td>
+</tr>
+<tr>
+<td><strong>AWS CodeDeploy</strong></td>
+<td>Servicio que <strong>automatiza las implementaciones de software</strong> en EC2, Fargate y entornos on-premises.</td>
+<td>Despliegue continuo, actualizaciones sin tiempo de inactividad, automatización de releases.</td>
+</tr>
+<tr>
+<td><strong>AWS Cloud9</strong></td>
+<td><strong>IDE en la nube</strong> que permite escribir, ejecutar y depurar código desde cualquier navegador.</td>
+<td>Desarrollo remoto, colaboración en tiempo real, entornos de desarrollo preconfigurados.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de AWS permite automatizar las implementaciones de software en entornos de nube e instalaciones locales?</p>
+<p>→ <strong>AWS CodeDeploy</strong>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; Carlos Grande - 2025
+                </div>
+                
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.tracking", "navigation.tabs", "navigation.instant", "navigation.sections", "navigation.footer", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown_init.js"></script>
+      
+    
+  </body>
+</html>

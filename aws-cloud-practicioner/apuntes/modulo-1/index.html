@@ -1,0 +1,2616 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cuaderno de notas para las certificaciones AZ-900 y AWS Fundamentals del curso DevOps de UNIR.">
+      
+      
+        <meta name="author" content="charlstown">
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../modulo-2/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>M1 - Conceptos de la nube - Certificaciones Azure-AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-descripcion-de-la-nube-aws" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-header__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificaciones Azure-AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M1 - Conceptos de la nube
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../az-900/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AZ 900
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AWS Cloud Practicioner
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-nav__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    Certificaciones Azure-AWS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../az-900/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AZ 900
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AZ 900
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AWS Cloud Practicioner
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Cloud Practicioner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-nube-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción de la Nube AWS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Descripción de la Nube AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-migrar-a-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas de migrar a la nube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-amazon-web-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción a Amazon Web Services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-facturacion-y-economia-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Facturación y economía en la nube
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Facturación y economía en la nube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aspectos-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aspectos generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coste-total-de-la-propiedad-tco-total-cost-of-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coste total de la propiedad (TCO- Total Cost of Ownership)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costes-en-la-nube-vs-on-premises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costes en la nube vs. on-premises
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracion-de-costes-y-facturacion-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administración de costes y facturación en AWS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-infraestructura-y-modelo-de-responsabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Infraestructura y modelo de responsabilidad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Infraestructura y modelo de responsabilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infraestructura-global-de-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infraestructura global de AWS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-responsabilidad-compartida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo de responsabilidad compartida
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-aws-iam-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. AWS IAM. Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. AWS IAM. Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-iam-identity-and-access-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS IAM (Identity and Access Management)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-cuentas-y-datos-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protección de cuentas y datos en AWS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios cómputo y almacenamiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Facturación, precios y soporte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Seguridad y cumplimiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/test-ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test de ejemplo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-descripcion-de-la-nube-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Descripción de la Nube AWS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Descripción de la Nube AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-migrar-a-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas de migrar a la nube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-amazon-web-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción a Amazon Web Services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-facturacion-y-economia-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Facturación y economía en la nube
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Facturación y economía en la nube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aspectos-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aspectos generales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coste-total-de-la-propiedad-tco-total-cost-of-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coste total de la propiedad (TCO- Total Cost of Ownership)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costes-en-la-nube-vs-on-premises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Costes en la nube vs. on-premises
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administracion-de-costes-y-facturacion-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administración de costes y facturación en AWS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-infraestructura-y-modelo-de-responsabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Infraestructura y modelo de responsabilidad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Infraestructura y modelo de responsabilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infraestructura-global-de-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infraestructura global de AWS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-responsabilidad-compartida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelo de responsabilidad compartida
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-aws-iam-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. AWS IAM. Seguridad
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. AWS IAM. Seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-iam-identity-and-access-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS IAM (Identity and Access Management)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-cuentas-y-datos-en-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      Protección de cuentas y datos en AWS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="m1-conceptos-de-la-nube">M1 - Conceptos de la nube<a class="headerlink" href="#m1-conceptos-de-la-nube" title="Permanent link">&para;</a></h1>
+<h2 id="1-descripcion-de-la-nube-aws">1. Descripción de la Nube AWS<a class="headerlink" href="#1-descripcion-de-la-nube-aws" title="Permanent link">&para;</a></h2>
+<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h3>
+<h4 id="modelos-de-servicio-en-la-nube">Modelos de servicio en la nube<a class="headerlink" href="#modelos-de-servicio-en-la-nube" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>¿Qué ofrece?</th>
+<th>Ejemplos en AWS</th>
+<th>Responsabilidad del cliente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IaaS</td>
+<td>Infraestructura básica</td>
+<td>EC2, EBS, S3 (cuando se usa como almacenamiento puro)</td>
+<td>Sistema operativo, aplicaciones, datos</td>
+</tr>
+<tr>
+<td>PaaS</td>
+<td>Plataforma gestionada</td>
+<td>Lambda, Elastic Beanstalk, RDS, Fargate</td>
+<td>Código y datos de la aplicación</td>
+</tr>
+<tr>
+<td>SaaS</td>
+<td>Aplicación completa</td>
+<td>WorkMail, Chime, AWS Managed Microsoft AD</td>
+<td>Solo configuración y uso</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿A qué modelo pertenece Amazon RDS?</p>
+<p>→ RDS es <strong>PaaS</strong>, ya que AWS gestiona la base de datos subyacente.<br />
+→ No es IaaS porque no gestionas el sistema operativo ni la base de datos directamente.</p>
+</div>
+<h4 id="implementaciones-en-la-nube">Implementaciones en la nube<a class="headerlink" href="#implementaciones-en-la-nube" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tipo de implementación</th>
+<th>Descripción</th>
+<th>Ejemplos en AWS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nube pública</td>
+<td>Toda la infraestructura es de AWS</td>
+<td>EC2, Lambda, S3</td>
+</tr>
+<tr>
+<td>Nube privada</td>
+<td>Infraestructura dedicada, gestionada localmente o por AWS</td>
+<td>AWS Outposts, VMware Cloud on AWS</td>
+</tr>
+<tr>
+<td>Nube híbrida</td>
+<td>Combina infraestructura on-premises y en la nube</td>
+<td>AWS Direct Connect, Storage Gateway</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio permite una conexión privada y de baja latencia entre on-premises y AWS?</p>
+<p>→ <strong>AWS Direct Connect</strong> (no confundir con VPN, que es más barata pero no garantiza baja latencia).</p>
+</div>
+<h3 id="ventajas-de-migrar-a-la-nube">Ventajas de migrar a la nube<a class="headerlink" href="#ventajas-de-migrar-a-la-nube" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Ventaja</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cambio de <strong>CAPEX</strong> a <strong>OPEX</strong></td>
+<td>Se sustituyen grandes inversiones en infraestructura (CAPEX) por gastos variables controlados (OPEX).</td>
+</tr>
+<tr>
+<td>Economías de escala</td>
+<td>Al haber más clientes, los proveedores pueden ofrecer precios más bajos.</td>
+</tr>
+<tr>
+<td>Sin necesidad de estimar capacidad</td>
+<td>Se pueden ajustar los recursos de forma dinámica según la demanda.</td>
+</tr>
+<tr>
+<td>Aumento de velocidad y agilidad</td>
+<td>Los recursos se despliegan en minutos en lugar de semanas.</td>
+</tr>
+<tr>
+<td>Reducción de costes de mantenimiento</td>
+<td>No es necesario gestionar centros de datos; se puede enfocar en el negocio.</td>
+</tr>
+<tr>
+<td>Expansión global en minutos</td>
+<td>Con AWS, es posible desplegar servicios en múltiples regiones con baja latencia y menor coste.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué ventaja económica clave impulsa la migración a la nube?</p>
+<p>→ El cambio de <strong>CAPEX a OPEX</strong> permite a las empresas evitar grandes inversiones iniciales y pagar solo por lo que consumen.</p>
+</div>
+<h3 id="introduccion-a-amazon-web-services">Introducción a Amazon Web Services<a class="headerlink" href="#introduccion-a-amazon-web-services" title="Permanent link">&para;</a></h3>
+<h4 id="interaccion-con-los-servicios">Interacción con los servicios<a class="headerlink" href="#interaccion-con-los-servicios" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Opción de interacción</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consola de administración</td>
+<td>Interfaz gráfica web. Intuitiva y fácil de usar, pensada para tareas puntuales o exploración.</td>
+</tr>
+<tr>
+<td>CLI (Command Line Interface)</td>
+<td>Herramienta de línea de comandos, útil para automatizar tareas y scripting.</td>
+</tr>
+<tr>
+<td>SDKs</td>
+<td>Conjuntos de librerías para lenguajes como Python (Boto3), Java, JavaScript, etc.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿En qué se basan las tres opciones de interacción con AWS?</p>
+<p>→ Todas usan <strong>la API REST de AWS</strong> como base para ejecutar operaciones sobre los servicios.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué herramienta es ideal para tareas automatizadas o integraciones en scripts?</p>
+<p>→ La <strong>CLI de AWS</strong> permite interactuar con servicios mediante scripts en bash, PowerShell, etc.</p>
+</div>
+<h4 id="adopcion-de-la-nube">Adopción de la nube<a class="headerlink" href="#adopcion-de-la-nube" title="Permanent link">&para;</a></h4>
+<p>AWS proporciona un marco llamado <strong>AWS Cloud Adoption Framework (AWS CAF)</strong>.</p>
+<ul>
+<li>Su objetivo es ayudar a las organizaciones a <strong>planificar y estructurar la adopción de la nube</strong>.</li>
+<li>Define <strong>6 perspectivas</strong>, que cubren diferentes áreas funcionales de una empresa.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Perspectiva</th>
+<th>Enfoque principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business</td>
+<td>Alineación con objetivos de negocio</td>
+</tr>
+<tr>
+<td>People</td>
+<td>Preparación del personal y habilidades</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>Gestión de riesgos, cumplimiento, políticas</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>Infraestructura, herramientas y servicios</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Protección de datos, identidad y acceso</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Gestión de operaciones y monitoreo</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué es AWS CAF y para qué sirve?</p>
+<p>→ Es un marco de trabajo que ayuda a las organizaciones a migrar a la nube alineando tecnología, personas y procesos.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cuántas perspectivas define AWS CAF?</p>
+<p>→ Seis: Business, People, Governance, Platform, Security y Operations.</p>
+</div>
+<h2 id="2-facturacion-y-economia-en-la-nube">2. Facturación y economía en la nube<a class="headerlink" href="#2-facturacion-y-economia-en-la-nube" title="Permanent link">&para;</a></h2>
+<h3 id="aspectos-generales">Aspectos generales<a class="headerlink" href="#aspectos-generales" title="Permanent link">&para;</a></h3>
+<h4 id="modelo-de-precios-de-aws">Modelo de precios de AWS<a class="headerlink" href="#modelo-de-precios-de-aws" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Fuente de Costos</th>
+<th>Unidad de Cálculo</th>
+<th>Notas Clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computación</td>
+<td>Por hora o por segundo</td>
+<td>EC2, Lambda, RDS, etc.</td>
+</tr>
+<tr>
+<td>Almacenamiento de datos</td>
+<td>Por GB</td>
+<td>S3, EBS, Glacier, EFS</td>
+</tr>
+<tr>
+<td>Transferencia de datos</td>
+<td>Por GB (salida)</td>
+<td>Entrada gratuita en la mayoría de casos.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="transferencia-de-datos">Transferencia de datos<a class="headerlink" href="#transferencia-de-datos" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Entrada: <strong>Gratis</strong> en la mayoría de los servicios.</li>
+<li>Salida: <strong>Se cobra por GB</strong>.</li>
+<li>Transferencia entre servicios en la misma región: <strong>Generalmente gratuita</strong> (hay excepciones).</li>
+</ul>
+<h4 id="estrategias-de-ahorro">Estrategias de ahorro<a class="headerlink" href="#estrategias-de-ahorro" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Estrategia</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pago por uso</td>
+<td>Sin compromisos, pagas lo que consumes.</td>
+</tr>
+<tr>
+<td>Reservas de capacidad (EC2, RDS)</td>
+<td>Ahorro de hasta un <strong>75%</strong> respecto a demanda por 1 o 3 años.</td>
+</tr>
+<tr>
+<td>Instancias Spot</td>
+<td>Usa capacidad no utilizada de AWS a precios reducidos (hasta 90% más baratas).</td>
+</tr>
+<tr>
+<td>Descuentos por volumen</td>
+<td>Cuanto más usas, menos pagas por GB.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="tipos-de-instancias-reservadas-para-ecs-y-rds">Tipos de instancias reservadas (para ECS y RDS)<a class="headerlink" href="#tipos-de-instancias-reservadas-para-ecs-y-rds" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AURI (All Upfront)</td>
+<td>Pago inicial completo</td>
+</tr>
+<tr>
+<td>PURI (Partial Upfront)</td>
+<td>Pago inicial parcial</td>
+</tr>
+<tr>
+<td>NURI (No Upfront)</td>
+<td>Sin pago inicial</td>
+</tr>
+</tbody>
+</table>
+<h4 id="capa-gratuita-de-aws">Capa gratuita de AWS<a class="headerlink" href="#capa-gratuita-de-aws" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Disponible por <strong>12 meses</strong> para nuevos clientes.</li>
+<li>Incluye servicios como <strong>EC2, S3, RDS (uso limitado), Lambda, DynamoDB</strong>, etc.</li>
+<li>Algunos servicios como <strong>VPC, IAM, Auto Scaling, CloudFormation, OpsWorks y Elastic Beanstalk</strong> no tienen coste adicional, aunque el uso de recursos asociados puede generar cargos.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Cuándo es gratuita la transferencia de datos en AWS?</p>
+<p>→ La <strong>entrada de datos</strong> es gratuita casi siempre. La <strong>salida</strong> se cobra por GB, pero la transferencia <strong>dentro de la misma región</strong> suele ser gratuita (hay excepciones).</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué porcentaje de ahorro máximo se puede obtener con instancias reservadas?</p>
+<p>→ Hasta <strong>75%</strong> de ahorro frente a instancias bajo demanda.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cuáles son los tipos de instancias reservadas en AWS?</p>
+<p>→ <strong>AURI</strong> (Pago inicial completo), <strong>PURI</strong> (Parcial), <strong>NURI</strong> (Sin pago inicial).</p>
+</div>
+<h3 id="coste-total-de-la-propiedad-tco-total-cost-of-ownership">Coste total de la propiedad (TCO- Total Cost of Ownership)<a class="headerlink" href="#coste-total-de-la-propiedad-tco-total-cost-of-ownership" title="Permanent link">&para;</a></h3>
+<p>El <strong>coste total de la propiedad (TCO, Total Cost of Ownership)</strong> es la estimación financiera que ayuda a identificar todos los <strong>costes directos e indirectos</strong> de un sistema.</p>
+<p>Se usa para comparar:</p>
+<ul>
+<li>Ejecutar una infraestructura en <strong>instalaciones propias</strong> (on-premises)</li>
+<li>Versus hacerlo en <strong>la nube (AWS)</strong></li>
+</ul>
+<p>Sirve también para <strong>presupuestar una migración</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Categoría de coste</th>
+<th>Elementos incluidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Server Costs</strong></td>
+<td>Hardware (servidores, racks, switches), licencias de software y mantenimiento</td>
+</tr>
+<tr>
+<td><strong>Storage Costs</strong></td>
+<td>Discos, switches SAN/FC, costes de administración de almacenamiento</td>
+</tr>
+<tr>
+<td><strong>Network Costs</strong></td>
+<td>Hardware LAN, balanceadores, ancho de banda, costes de red</td>
+</tr>
+<tr>
+<td><strong>IT Labor Costs</strong></td>
+<td>Administración de servidores y virtualización</td>
+</tr>
+<tr>
+<td><strong>Overhead Costs</strong></td>
+<td>Espacio físico, energía eléctrica, refrigeración</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué costes se suelen ignorar en los cálculos on-premises pero son importantes en TCO?</p>
+<p>→ Costes indirectos como <strong>energía, espacio, refrigeración y mantenimiento del personal IT</strong>.</p>
+</div>
+<h3 id="costes-en-la-nube-vs-on-premises">Costes en la nube vs. on-premises<a class="headerlink" href="#costes-en-la-nube-vs-on-premises" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Nube (AWS)</th>
+<th>Instalaciones propias (on-premises)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tipo de gasto</td>
+<td>Variables (OPEX)</td>
+<td>Predicción fija (CAPEX + OPEX)</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>Elástica, bajo demanda</td>
+<td>Limitada, requiere sobredimensionamiento</td>
+</tr>
+<tr>
+<td>Previsibilidad de costes</td>
+<td>Alta, gracias a precios por unidad de uso</td>
+<td>Baja, incluye costes fijos aunque no se use</td>
+</tr>
+<tr>
+<td>Herramientas de cálculo</td>
+<td><strong>AWS Pricing Calculator</strong></td>
+<td>Estimaciones manuales o herramientas de terceros</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué ventaja clave ofrece AWS respecto a costes?</p>
+<p>→ <strong>Transparencia y granularidad</strong>, permite estimar costes según uso real: RAM, almacenamiento, red, etc.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué herramienta permite calcular y optimizar el coste en AWS?</p>
+<p>→ <a href="https://calculator.aws/#/">AWS Pricing Calculator</a><br />
+Útil para planificar servicios, estimar facturas y detectar posibles <strong>reducciones de coste</strong>.</p>
+</div>
+<h3 id="administracion-de-costes-y-facturacion-en-aws">Administración de costes y facturación en AWS<a class="headerlink" href="#administracion-de-costes-y-facturacion-en-aws" title="Permanent link">&para;</a></h3>
+<p>AWS proporciona herramientas centralizadas y visuales para facilitar el control, optimización y previsión de costes.</p>
+<h4 id="aws-organizations">AWS Organizations<a class="headerlink" href="#aws-organizations" title="Permanent link">&para;</a></h4>
+<p>Servicio <strong>gratuito</strong> para gestionar múltiples cuentas desde una sola organización.</p>
+<p>Permite:</p>
+<ul>
+<li>Crear <strong>grupos de cuentas</strong>.</li>
+<li>Aplicar <strong>políticas de control de servicios (SCPs)</strong>.</li>
+<li>Unificar la <strong>facturación</strong> (una sola factura para toda la organización).</li>
+<li>Administrar aplicaciones y permisos de forma centralizada mediante API.</li>
+<li>No sustituye a IAM, pero puede <strong>permitir o denegar servicios a cuentas específicas</strong>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué ventaja clave ofrece AWS Organizations en facturación?</p>
+<p>→ Permite una <strong>factura única</strong> para todas las cuentas de la organización, facilitando el seguimiento y consolidación de costes.</p>
+</div>
+<h4 id="herramientas-de-administracion-de-costes">Herramientas de administración de costes<a class="headerlink" href="#herramientas-de-administracion-de-costes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Panel de facturación</strong></td>
+<td>Consulta el gasto acumulado por servicio y visualiza tendencias.</td>
+</tr>
+<tr>
+<td><strong>AWS Cost Explorer</strong></td>
+<td>Gráficos, informes detallados, datos históricos de hasta <strong>13 meses</strong>.</td>
+</tr>
+<tr>
+<td><strong>Presupuestos de AWS</strong></td>
+<td>Estimaciones y alertas personalizadas vía <strong>Amazon SNS</strong>.</td>
+</tr>
+<tr>
+<td><strong>Informes de uso y coste</strong></td>
+<td>Datos diarios detallados exportables a <strong>S3</strong> para análisis avanzado.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué herramienta usar para recibir alertas cuando se supera un presupuesto?</p>
+<p>→ <strong>Presupuestos de AWS</strong>, configurando alertas con <strong>Amazon SNS</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué herramienta permite ver el uso de AWS en gráficas históricas?</p>
+<p>→ <strong>AWS Cost Explorer</strong>, con vista de hasta <strong>13 meses</strong>.</p>
+</div>
+<h4 id="aws-support">AWS Support<a class="headerlink" href="#aws-support" title="Permanent link">&para;</a></h4>
+<p>AWS ofrece tanto <strong>herramientas de soporte</strong> como <strong>planes de soporte personalizados</strong> para adaptarse a distintos entornos, desde pruebas hasta cargas de trabajo críticas en producción.</p>
+<h5 id="herramientas-de-soporte-incluidas">Herramientas de soporte incluidas<a class="headerlink" href="#herramientas-de-soporte-incluidas" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Funciones principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Trusted Advisor</strong></td>
+<td>- Optimizar costes - Mejorar la seguridad - Aumentar la fiabilidad y rendimiento - Detectar configuraciones ineficientes</td>
+</tr>
+<tr>
+<td><strong>TAM (Technical Account Manager)</strong></td>
+<td>- Punto de contacto principal (Business y Enterprise) - Revisión de arquitectura, planificación y optimización</td>
+</tr>
+<tr>
+<td><strong>Concierge Support Team</strong></td>
+<td>- Expertos en gestión de cuentas y facturación</td>
+</tr>
+</tbody>
+</table>
+<h5 id="planes-de-soporte-de-aws">Planes de soporte de AWS<a class="headerlink" href="#planes-de-soporte-de-aws" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Descripción</th>
+<th>Uso recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic</strong></td>
+<td>Gratuito. Acceso a recursos, foros y 6 comprobaciones de Trusted Advisor.</td>
+<td>Experimentación inicial.</td>
+</tr>
+<tr>
+<td><strong>Developer</strong></td>
+<td>Soporte durante la fase de desarrollo.</td>
+<td>Cargas de trabajo no productivas.</td>
+</tr>
+<tr>
+<td><strong>Business</strong></td>
+<td>Soporte para cargas en producción.</td>
+<td>Aplicaciones empresariales.</td>
+</tr>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>Soporte para cargas críticas, incluye TAM.</td>
+<td>Aplicaciones críticas de negocio.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué planes de soporte incluyen un TAM (Technical Account Manager)?</p>
+<p>→ Solo los planes <strong>Business</strong> y <strong>Enterprise</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué plan debes contratar si tienes cargas de trabajo en producción?</p>
+<p>→ Mínimo el plan <strong>Business</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cuántas comprobaciones de Trusted Advisor están disponibles en el plan Basic?</p>
+<p>→ Solo <strong>6 comprobaciones</strong>.</p>
+</div>
+<h2 id="3-infraestructura-y-modelo-de-responsabilidad">3. Infraestructura y modelo de responsabilidad<a class="headerlink" href="#3-infraestructura-y-modelo-de-responsabilidad" title="Permanent link">&para;</a></h2>
+<h3 id="infraestructura-global-de-aws">Infraestructura global de AWS<a class="headerlink" href="#infraestructura-global-de-aws" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regiones</strong></td>
+<td>Ubicaciones geográficas independientes. Aisladas entre sí para garantizar seguridad y gobernanza de datos.</td>
+</tr>
+<tr>
+<td><strong>Zonas de Disponibilidad (AZ)</strong></td>
+<td>Cada región tiene varias AZs. Ofrecen alta disponibilidad, tolerancia a fallos y escalabilidad. Cada AZ puede incluir varios centros de datos separados físicamente <strong>(hasta 100 km de distancia)</strong>.</td>
+</tr>
+<tr>
+<td><strong>Puntos de Presencia (Edge Locations)</strong></td>
+<td>Mejoran la latencia y la entrega de contenido. Utilizados por servicios como <strong>Amazon CloudFront (CDN)</strong> y <strong>Route 53 (DNS)</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="caracteristicas-clave-de-la-infraestructura-de-aws">Características clave de la infraestructura de AWS<a class="headerlink" href="#caracteristicas-clave-de-la-infraestructura-de-aws" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Detalles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Elástica y escalable</strong></td>
+<td>Recursos que se ajustan dinámicamente a la demanda. Rápida adaptación a crecimientos o reducciones.</td>
+</tr>
+<tr>
+<td><strong>Tolerante a errores</strong></td>
+<td>Redundancia integrada en los componentes. Permite continuar operaciones incluso con fallos en algunos elementos.</td>
+</tr>
+<tr>
+<td><strong>Alta disponibilidad</strong></td>
+<td>Diseño para minimizar el tiempo de inactividad. Uso de múltiples AZs para continuidad de negocio.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué componente de AWS mejora la experiencia de usuario mediante baja latencia y optimización de contenido?</p>
+<p>→ Los <strong>Puntos de Presencia (Edge Locations)</strong>, utilizados en <strong>Amazon CloudFront</strong> y <strong>Route 53</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Las regiones de AWS replican datos automáticamente entre sí?</p>
+<p>→ <strong>No</strong>, la replicación entre regiones debe ser gestionada por el cliente.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cuál es la separación máxima entre centros de datos de una misma zona de disponibilidad?</p>
+<p>→ Hasta <strong>100 km</strong>.</p>
+</div>
+<h3 id="modelo-de-responsabilidad-compartida">Modelo de responsabilidad compartida<a class="headerlink" href="#modelo-de-responsabilidad-compartida" title="Permanent link">&para;</a></h3>
+<p>El <strong>modelo de responsabilidad compartida</strong> define qué aspectos de la seguridad y el cumplimiento son responsabilidad de <strong>AWS</strong> y cuáles del <strong>cliente</strong>.</p>
+<h4 id="responsabilidades-de-aws-seguridad-de-la-nube">Responsabilidades de AWS (seguridad <em>de</em> la nube)<a class="headerlink" href="#responsabilidades-de-aws-seguridad-de-la-nube" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Área</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infraestructura física</td>
+<td>Seguridad de centros de datos, edificios, energía, refrigeración.</td>
+</tr>
+<tr>
+<td>Infraestructura de red y hardware</td>
+<td>Seguridad de switches, servidores, almacenamiento y redes.</td>
+</tr>
+<tr>
+<td>Software de base</td>
+<td>Computación, almacenamiento, base de datos y red gestionados.</td>
+</tr>
+<tr>
+<td>Regiones, zonas y edge locations</td>
+<td>Protección y monitoreo continuo de la infraestructura global.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responsabilidades-del-cliente-seguridad-en-la-nube">Responsabilidades del cliente (seguridad <em>en</em> la nube)<a class="headerlink" href="#responsabilidades-del-cliente-seguridad-en-la-nube" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Área</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datos del cliente</td>
+<td>Cifrado, clasificación y control de acceso a los datos.</td>
+</tr>
+<tr>
+<td>Gestión de aplicaciones y accesos</td>
+<td>Identidad, permisos, MFA, rotación de claves.</td>
+</tr>
+<tr>
+<td>Sistema operativo y red</td>
+<td>Parches de seguridad, configuración de firewall, apertura de puertos.</td>
+</tr>
+<tr>
+<td>Cifrado del tráfico y almacenamiento</td>
+<td>Cifrado en tránsito y en reposo (opcional según servicio y uso).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Quién es responsable de aplicar parches en una instancia EC2?</p>
+<p>→ El <strong>cliente</strong>, ya que EC2 es un servicio tipo <strong>IaaS</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Y en un servicio como Lambda?</p>
+<p>→ AWS gestiona la infraestructura y el sistema operativo (modelo <strong>PaaS</strong>), el cliente solo sube su código.</p>
+</div>
+<h2 id="4-aws-iam-seguridad">4. AWS IAM. Seguridad<a class="headerlink" href="#4-aws-iam-seguridad" title="Permanent link">&para;</a></h2>
+<h3 id="aws-iam-identity-and-access-management">AWS IAM (Identity and Access Management)<a class="headerlink" href="#aws-iam-identity-and-access-management" title="Permanent link">&para;</a></h3>
+<p><strong>AWS IAM</strong> es un <strong>servicio gratuito</strong> que permite controlar de forma segura el acceso a recursos en AWS. Permite definir <strong>quién</strong> puede acceder, <strong>a qué recursos</strong>, <strong>qué acciones</strong> puede realizar y <strong>cómo</strong> puede acceder.</p>
+<h4 id="componentes-clave-de-iam">Componentes clave de IAM<a class="headerlink" href="#componentes-clave-de-iam" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Usuario IAM</strong></td>
+<td>Identidad que representa a una persona o aplicación.</td>
+</tr>
+<tr>
+<td><strong>Grupo IAM</strong></td>
+<td>Conjunto de usuarios IAM que comparten políticas comunes.</td>
+</tr>
+<tr>
+<td><strong>Política IAM</strong></td>
+<td>Documento en JSON que define permisos: recursos, acciones y condiciones.</td>
+</tr>
+<tr>
+<td><strong>Rol IAM</strong></td>
+<td>Permisos temporales para acceder a servicios de AWS, usados por usuarios o aplicaciones.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="metodos-de-acceso-a-aws">Métodos de acceso a AWS<a class="headerlink" href="#metodos-de-acceso-a-aws" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Programático</strong></td>
+<td>Uso de <strong>Access Key ID</strong> y <strong>Secret Access Key</strong>. Ideal para APIs, SDKs y CLI.</td>
+</tr>
+<tr>
+<td><strong>Consola web</strong></td>
+<td>Acceso vía navegador. Se requiere ID de cuenta, nombre de usuario y contraseña.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Es recomendable activar <strong>MFA (Multi-Factor Authentication)</strong> para mayor seguridad.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué principio se debe seguir al conceder permisos en AWS IAM?</p>
+<p>→ <strong>Principio de mínimo privilegio</strong>: conceder solo los permisos necesarios.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cuál es la diferencia entre un rol y un usuario IAM?</p>
+<p>→ Un <strong>usuario IAM</strong> es una identidad permanente; un <strong>rol IAM</strong> concede permisos <strong>temporales</strong>.</p>
+</div>
+<h3 id="proteccion-de-cuentas-y-datos-en-aws">Protección de cuentas y datos en AWS<a class="headerlink" href="#proteccion-de-cuentas-y-datos-en-aws" title="Permanent link">&para;</a></h3>
+<p>La seguridad es uno de los pilares fundamentales de AWS, por lo que se recomienda seguir las buenas prácticas descritas en el <strong>AWS Security Pillar (2020)</strong>.</p>
+<h4 id="recomendaciones-para-proteger-la-cuenta-raiz">Recomendaciones para proteger la cuenta raíz<a class="headerlink" href="#recomendaciones-para-proteger-la-cuenta-raiz" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Práctica recomendada</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Habilitar MFA</strong></td>
+<td>Activar <strong>Multi-Factor Authentication</strong> para añadir una capa de seguridad adicional.</td>
+</tr>
+<tr>
+<td><strong>Eliminar claves de acceso</strong></td>
+<td>Evitar el uso de claves asociadas a la cuenta raíz.</td>
+</tr>
+<tr>
+<td><strong>Crear usuarios IAM</strong></td>
+<td>Utilizar cuentas individuales con permisos mínimos necesarios.</td>
+</tr>
+<tr>
+<td><strong>Uso de grupos IAM</strong></td>
+<td>Asignar permisos a grupos, no directamente a los usuarios.</td>
+</tr>
+<tr>
+<td><strong>Política de contraseñas</strong></td>
+<td>Configurar contraseñas seguras y robustas.</td>
+</tr>
+<tr>
+<td><strong>Usar roles IAM</strong></td>
+<td>Evitar compartir credenciales, utilizar roles temporales.</td>
+</tr>
+<tr>
+<td><strong>Monitorizar con CloudTrail</strong></td>
+<td>Registrar y auditar la actividad de la cuenta.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué se debe hacer con las claves de acceso de la cuenta raíz?</p>
+<p>→ <strong>Eliminarlas</strong> y evitar su uso.</p>
+</div>
+<h4 id="servicios-de-aws-para-mejorar-la-seguridad">Servicios de AWS para mejorar la seguridad<a class="headerlink" href="#servicios-de-aws-para-mejorar-la-seguridad" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Organizations</strong></td>
+<td>Gestión centralizada de cuentas y aplicación de <strong>políticas SCP</strong>.</td>
+</tr>
+<tr>
+<td><strong>AWS KMS</strong></td>
+<td>Gestión de claves de cifrado para proteger datos en AWS.</td>
+</tr>
+<tr>
+<td><strong>Amazon Cognito</strong></td>
+<td>Control de acceso a aplicaciones web y móviles, integración con redes sociales.</td>
+</tr>
+<tr>
+<td><strong>AWS Shield</strong></td>
+<td>Protección contra ataques de <strong>denegación de servicio (DDoS)</strong>.</td>
+</tr>
+<tr>
+<td><strong>AWS Certificate Manager</strong></td>
+<td>Gestión de certificados SSL/TLS para cifrado de datos en tránsito.</td>
+</tr>
+<tr>
+<td><strong>AWS Storage Gateway</strong></td>
+<td>Almacenamiento híbrido, integra entornos on-premises con AWS.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="servicios-de-aws-relacionados-con-cumplimiento-y-proteccion-de-datos">Servicios de AWS relacionados con cumplimiento y protección de datos<a class="headerlink" href="#servicios-de-aws-relacionados-con-cumplimiento-y-proteccion-de-datos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Config</strong></td>
+<td>Evaluar y auditar configuraciones de recursos en AWS.</td>
+</tr>
+<tr>
+<td><strong>AWS Artifact</strong></td>
+<td>Acceso a documentos de cumplimiento y certificaciones.</td>
+</tr>
+<tr>
+<td><strong>AWS Service Catalog</strong></td>
+<td>Administración de catálogos de servicios aprobados.</td>
+</tr>
+<tr>
+<td><strong>Amazon Macie</strong></td>
+<td>Identificación y protección de <strong>información personal sensible</strong>.</td>
+</tr>
+<tr>
+<td><strong>Amazon Inspector</strong></td>
+<td>Evaluación de seguridad y buenas prácticas de configuración.</td>
+</tr>
+<tr>
+<td><strong>Amazon GuardDuty</strong></td>
+<td>Detección de amenazas y actividades maliciosas.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio permite gestionar claves de cifrado en AWS?</p>
+<p>→ <strong>AWS Key Management Service (KMS)</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio facilita la detección de información personal (PII)?</p>
+<p>→ <strong>Amazon Macie</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué herramienta debes usar para monitorizar la actividad de la cuenta?</p>
+<p>→ <strong>AWS CloudTrail</strong>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; Carlos Grande - 2025
+                </div>
+                
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.tracking", "navigation.tabs", "navigation.instant", "navigation.sections", "navigation.footer", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown_init.js"></script>
+      
+    
+  </body>
+</html>

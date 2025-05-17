@@ -1,0 +1,2633 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cuaderno de notas para las certificaciones AZ-900 y AWS Fundamentals del curso DevOps de UNIR.">
+      
+      
+        <meta name="author" content="charlstown">
+      
+      
+      
+        <link rel="prev" href="../modulo-1/">
+      
+      
+        <link rel="next" href="../modulo-3/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>M2 - Servicios cómputo y almacenamiento - Certificaciones Azure-AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-servicio-de-redes-y-entrega-de-contenido" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-header__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificaciones Azure-AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M2 - Servicios cómputo y almacenamiento
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../az-900/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AZ 900
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AWS Cloud Practicioner
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-nav__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    Certificaciones Azure-AWS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../az-900/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AZ 900
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AZ 900
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/apuntes/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../az-900/tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AWS Cloud Practicioner
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Cloud Practicioner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios cómputo y almacenamiento
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios cómputo y almacenamiento
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-servicio-de-redes-y-entrega-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Servicio de redes y entrega de contenido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Servicio de redes y entrega de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-virtual-private-cloud-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Virtual Private Cloud (Amazon VPC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-y-seguridad-en-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redes y seguridad en Amazon VPC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-amazon-elastic-compute-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Amazon Elastic Compute Cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Amazon Elastic Compute Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon EC2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudwatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon CloudWatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elastic-container-service-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elastic Container service (ECS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-elastic-kubernetes-service-eks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Elastic Kubernetes Service (EKS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-elastic-container-registry-ecr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Elastic Container Registry (ECR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Lambda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-elastic-beanstalk" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Elastic Beanstalk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-servicios-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Servicios de almacenamiento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Servicios de almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-ebs-elastic-block-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon EBS (Elastic Block Store)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-s3-simple-storage-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon S3 (Simple Storage Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-efs-elastic-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon EFS (Elastic File System)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Facturación, precios y soporte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Seguridad y cumplimiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/test-ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test de ejemplo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-servicio-de-redes-y-entrega-de-contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Servicio de redes y entrega de contenido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Servicio de redes y entrega de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-virtual-private-cloud-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Virtual Private Cloud (Amazon VPC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redes-y-seguridad-en-amazon-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redes y seguridad en Amazon VPC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-amazon-elastic-compute-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Amazon Elastic Compute Cloud
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Amazon Elastic Compute Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon EC2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-cloudwatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon CloudWatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elastic-container-service-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elastic Container service (ECS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-elastic-kubernetes-service-eks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Elastic Kubernetes Service (EKS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-elastic-container-registry-ecr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Elastic Container Registry (ECR)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Lambda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-elastic-beanstalk" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Elastic Beanstalk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-servicios-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Servicios de almacenamiento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Servicios de almacenamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon-ebs-elastic-block-store" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon EBS (Elastic Block Store)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-s3-simple-storage-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon S3 (Simple Storage Service)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-efs-elastic-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon EFS (Elastic File System)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="m2-servicios-computo-y-almacenamiento">M2 - Servicios cómputo y almacenamiento<a class="headerlink" href="#m2-servicios-computo-y-almacenamiento" title="Permanent link">&para;</a></h1>
+<h2 id="1-servicio-de-redes-y-entrega-de-contenido">1. Servicio de redes y entrega de contenido<a class="headerlink" href="#1-servicio-de-redes-y-entrega-de-contenido" title="Permanent link">&para;</a></h2>
+<h3 id="amazon-virtual-private-cloud-amazon-vpc">Amazon Virtual Private Cloud (Amazon VPC)<a class="headerlink" href="#amazon-virtual-private-cloud-amazon-vpc" title="Permanent link">&para;</a></h3>
+<p><strong>Amazon VPC</strong> es un servicio fundamental de AWS que permite <strong>aislar de forma lógica una sección de la nube de AWS</strong> para desplegar recursos de forma segura y controlada.</p>
+<p>![[aws-vpc.png]]</p>
+<h4 id="caracteristicas-principales-de-amazon-vpc">Características principales de Amazon VPC<a class="headerlink" href="#caracteristicas-principales-de-amazon-vpc" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aislamiento lógico</strong></td>
+<td>Crea redes privadas dentro de AWS, independientes de otras VPC.</td>
+</tr>
+<tr>
+<td><strong>Control de direcciones IP</strong></td>
+<td>Define rangos de direcciones IP para las instancias y recursos.</td>
+</tr>
+<tr>
+<td><strong>Subredes</strong></td>
+<td>Crea subredes <strong>públicas</strong> (con acceso a Internet) o <strong>privadas</strong>.</td>
+</tr>
+<tr>
+<td><strong>Tablas de enrutamiento</strong></td>
+<td>Gestionan las rutas del tráfico de red entre subredes y a Internet.</td>
+</tr>
+<tr>
+<td><strong>Puertas de enlace</strong></td>
+<td>Controlan la salida/entrada de la red (Internet Gateway, NAT Gateway).</td>
+</tr>
+<tr>
+<td><strong>ACLs de red</strong></td>
+<td>Capas adicionales de control de acceso para gestionar el tráfico entre subredes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="direcciones-ip-en-amazon-vpc">Direcciones IP en Amazon VPC<a class="headerlink" href="#direcciones-ip-en-amazon-vpc" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tipo de IP</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Privada</strong></td>
+<td>Asignada automáticamente en la VPC.</td>
+</tr>
+<tr>
+<td><strong>Pública</strong></td>
+<td>Opcional al crear la instancia, permite acceso desde Internet.</td>
+</tr>
+<tr>
+<td><strong>Elástica (EIP)</strong></td>
+<td>IP pública <strong>estática</strong> asociada a la cuenta. Puede implicar costes adicionales.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interfaz-de-red-elastica-eni">Interfaz de red elástica (ENI)<a class="headerlink" href="#interfaz-de-red-elastica-eni" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Es una <strong>interfaz de red virtual</strong> que puede:</p>
+<ul>
+<li>Asociarse o desacoplarse de una instancia de EC2.</li>
+<li>Mantener atributos como direcciones IP, MAC y reglas de seguridad al cambiar de instancia.</li>
+</ul>
+</li>
+<li>
+<p>Permite <strong>redireccionar tráfico de red</strong> rápidamente a otra instancia, facilitando tareas de alta disponibilidad y recuperación.</p>
+</li>
+</ul>
+<h4 id="tablas-de-enrutamiento">Tablas de enrutamiento<a class="headerlink" href="#tablas-de-enrutamiento" title="Permanent link">&para;</a></h4>
+<p>Es simplemente una <strong>lista de reglas (rutas)</strong> que indican <strong>a dónde debe enviarse el tráfico de red según su destino</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tabla de enrutamiento</strong></td>
+<td>Define las rutas del tráfico de red de las subredes.</td>
+</tr>
+<tr>
+<td><strong>Destino</strong></td>
+<td>Dirección de red hacia donde se dirige el tráfico.</td>
+</tr>
+<tr>
+<td><strong>Objetivo</strong></td>
+<td>Indica cómo se envía el tráfico (por ejemplo, Internet Gateway o NAT Gateway).</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Cada subred debe estar asociada a una tabla de enrutamiento.</li>
+<li>Varias subredes pueden compartir la misma tabla.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué tipo de IP se utiliza para asegurar una dirección pública fija?</p>
+<p>→ Las <strong>Elastic IP (EIP)</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué recurso permite separar el tráfico de Internet en subredes públicas y privadas?</p>
+<p>→ La <strong>Internet Gateway</strong> para subredes públicas y <strong>NAT Gateway</strong> para permitir tráfico saliente desde subredes privadas.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué permite hacer una Interfaz de Red Elástica (ENI)?</p>
+<p>→ Mover la configuración de red y redirigir el tráfico a otra instancia de forma rápida.</p>
+</div>
+<h3 id="redes-y-seguridad-en-amazon-vpc">Redes y seguridad en Amazon VPC<a class="headerlink" href="#redes-y-seguridad-en-amazon-vpc" title="Permanent link">&para;</a></h3>
+<p>Una vez creada la VPC, se dispone de diferentes herramientas y componentes para controlar y gestionar el tráfico dentro de la red.</p>
+<h4 id="componentes-de-red">Componentes de red<a class="headerlink" href="#componentes-de-red" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Internet Gateway</strong></td>
+<td>Permite la comunicación entre instancias de la VPC e Internet. Se requiere para hacer pública una subred.</td>
+</tr>
+<tr>
+<td><strong>NAT Gateway</strong></td>
+<td>Permite a instancias en subredes privadas acceder a Internet sin ser accesibles desde fuera.</td>
+</tr>
+<tr>
+<td><strong>Peering de VPC</strong></td>
+<td>Establece interconexión entre dos VPCs para compartir recursos.</td>
+</tr>
+<tr>
+<td><strong>Elastic IP (EIP)</strong></td>
+<td>IP pública y estática asignable a recursos de la VPC.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="herramientas-y-servicios-de-gestion-de-vpc">Herramientas y servicios de gestión de VPC<a class="headerlink" href="#herramientas-y-servicios-de-gestion-de-vpc" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Site-to-Site VPN</strong></td>
+<td>Conexión segura entre la VPC y una red remota.</td>
+</tr>
+<tr>
+<td><strong>AWS Direct Connect</strong></td>
+<td>Conexión dedicada de baja latencia entre la red on-premises y AWS.</td>
+</tr>
+<tr>
+<td><strong>VPC Endpoint (AWS PrivateLink)</strong></td>
+<td>Conexión privada a servicios de AWS sin pasar por Internet.</td>
+</tr>
+<tr>
+<td><strong>AWS Transit Gateway</strong></td>
+<td>Centraliza la conectividad de múltiples VPCs y redes locales.</td>
+</tr>
+<tr>
+<td><strong>Amazon Route 53</strong></td>
+<td>Servicio DNS escalable y altamente disponible.</td>
+</tr>
+<tr>
+<td><strong>Amazon CloudFront</strong></td>
+<td>Red de distribución de contenido (CDN) global.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="seguridad-en-la-vpc-security-groups-vs-acl-de-red">Seguridad en la VPC: Security Groups vs. ACL de Red<a class="headerlink" href="#seguridad-en-la-vpc-security-groups-vs-acl-de-red" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Security Group (Nivel de instancia)</th>
+<th>ACL de Red (Nivel de subred)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nivel de aplicación</td>
+<td>Instancia EC2</td>
+<td>Subred</td>
+</tr>
+<tr>
+<td>Tipo de reglas</td>
+<td>Solo <strong>permitir</strong></td>
+<td><strong>Permitir</strong> y <strong>denegar</strong></td>
+</tr>
+<tr>
+<td>Estado</td>
+<td>Con estado (retorno de tráfico automático)</td>
+<td>Sin estado (debe configurarse el tráfico de retorno)</td>
+</tr>
+<tr>
+<td>Evaluación de reglas</td>
+<td>Evalúa todas las reglas antes de decidir</td>
+<td>Evalúa en orden, aplicando la primera regla que coincide.</td>
+</tr>
+<tr>
+<td>Aplicación</td>
+<td>Manual a instancias</td>
+<td>Automáticamente a toda la subred</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué recurso debes utilizar para permitir que una instancia de una subred privada acceda a Internet?</p>
+<p>→ <strong>NAT Gateway</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué diferencia clave existe entre un Security Group y una Access Control List (ACL) de Red?</p>
+<p>→ Los <strong>Security Groups son con estado</strong> (permiten automáticamente el tráfico de retorno) y las <strong>ACL de red son sin estado</strong>, por lo que deben configurarse reglas explícitas para cada dirección de tráfico.</p>
+</div>
+<h2 id="2-amazon-elastic-compute-cloud">2. Amazon Elastic Compute Cloud<a class="headerlink" href="#2-amazon-elastic-compute-cloud" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Caso de uso principal</th>
+<th>Gestión Infraestructura</th>
+<th>Escalabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[[#Amazon EC2]]</td>
+<td>IaaS</td>
+<td>Máquinas virtuales, control total</td>
+<td>Cliente</td>
+<td>Manual / Auto Scaling</td>
+</tr>
+<tr>
+<td><strong>Lambda</strong></td>
+<td>FaaS</td>
+<td>Funciones sin servidor, ejecución por evento</td>
+<td>AWS (<strong>Serverless</strong>)</td>
+<td>Automática</td>
+</tr>
+<tr>
+<td><strong>Elastic Beanstalk</strong></td>
+<td>PaaS</td>
+<td>Despliegue rápido de aplicaciones web</td>
+<td>AWS (simplificado)</td>
+<td>Automática</td>
+</tr>
+<tr>
+<td><strong>ECS (EC2)</strong></td>
+<td>CaaS</td>
+<td>Contenedores gestionados sobre EC2</td>
+<td>Cliente (EC2)</td>
+<td>Manual / Auto Scaling</td>
+</tr>
+<tr>
+<td><strong>ECS (Fargate)</strong></td>
+<td>CaaS</td>
+<td>Contenedores sin gestionar servidores</td>
+<td>AWS (<strong>Serverless</strong>)</td>
+<td>Automática</td>
+</tr>
+<tr>
+<td><strong>EKS</strong></td>
+<td>CaaS</td>
+<td>Kubernetes gestionado</td>
+<td>Compartida</td>
+<td>Automática</td>
+</tr>
+<tr>
+<td><strong>Batch</strong></td>
+<td>Batch</td>
+<td>Procesos batch de gran volumen</td>
+<td>AWS (<strong>Serverless</strong>)</td>
+<td>Automática</td>
+</tr>
+<tr>
+<td><strong>Lightsail</strong></td>
+<td>Simplificado</td>
+<td>Aplicaciones simples y entornos de prueba</td>
+<td>AWS (muy simplificado)</td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amazon-ec2">Amazon EC2<a class="headerlink" href="#amazon-ec2" title="Permanent link">&para;</a></h3>
+<p><strong>Amazon EC2</strong> es un servicio de tipo <strong>IaaS (Infrastructure as a Service)</strong> que permite desplegar máquinas virtuales en la nube de AWS. Es ideal para ejecutar cualquier tipo de aplicación con escalabilidad, alta disponibilidad y pago por uso.</p>
+<h4 id="pasos-para-levantar-un-ec2">Pasos para levantar un EC2<a class="headerlink" href="#pasos-para-levantar-un-ec2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Paso</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. AMI (Amazon Machine Image)</strong></td>
+<td>Plantilla con el sistema operativo y configuraciones iniciales. Puede ser de AWS, propia, de Marketplace o de la comunidad.</td>
+</tr>
+<tr>
+<td><strong>2. Tipo de instancia</strong></td>
+<td>Selección de recursos de CPU, RAM, almacenamiento y red según la carga de trabajo. Ejemplo: t3.micro, m5.large.</td>
+</tr>
+<tr>
+<td><strong>3. Configuración de red</strong></td>
+<td>Seleccionar <strong>región</strong>, <strong>VPC</strong>, <strong>subred</strong> y si se asigna una IP pública.</td>
+</tr>
+<tr>
+<td><strong>4. Asociar rol IAM</strong></td>
+<td>Permite a la instancia acceder a otros servicios AWS (ej. S3) sin usar claves de acceso.</td>
+</tr>
+<tr>
+<td><strong>5. Datos de usuario</strong></td>
+<td>Scripts que se ejecutan automáticamente al arrancar la instancia. (User Data).</td>
+</tr>
+<tr>
+<td><strong>6. Opciones de almacenamiento</strong></td>
+<td>- <strong>EBS</strong>: Almacenamiento persistente a nivel de bloque.<br>- <strong>Instancia Store</strong>: Almacenamiento efímero, se pierde al parar la instancia.<br>- <strong>EFS</strong>: Almacenamiento de archivos compartido. No se usa para volumen raíz.<br>- <strong>S3</strong>: Almacenamiento de objetos, no se usa como volumen raíz.</td>
+</tr>
+<tr>
+<td><strong>7. Agregar etiquetas</strong></td>
+<td>Claves/valores para organizar y gestionar recursos (ej. <code>Environment: Production</code>).</td>
+</tr>
+<tr>
+<td><strong>8. Grupos de seguridad</strong></td>
+<td>Reglas de firewall que controlan el tráfico de entrada y salida.</td>
+</tr>
+<tr>
+<td><strong>9. Par de claves</strong></td>
+<td>Se usa para autenticarse en la instancia (SSH o RDP). Guarda la clave privada con seguridad.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de almacenamiento persistente a nivel de bloque es adecuado para el volumen raíz?</p>
+<p>→ <strong>Amazon EBS</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué ocurre si eliminas una instancia con almacenamiento tipo Instance Store?</p>
+<p>→ Se <strong>pierden los datos</strong>; es un almacenamiento efímero.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cómo se permite que una instancia EC2 acceda a S3 sin usar claves de acceso?</p>
+<p>→ Asociando un <strong>rol de IAM</strong> a la instancia.</p>
+</div>
+<h4 id="modelos-de-precios-de-amazon-ec2">Modelos de precios de Amazon EC2<a class="headerlink" href="#modelos-de-precios-de-amazon-ec2" title="Permanent link">&para;</a></h4>
+<p>AWS ofrece diferentes modelos de precios para adaptarse a las necesidades de coste, flexibilidad y compromiso de los clientes.</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Descripción</th>
+<th>Casos de uso recomendados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Instancias bajo demanda</strong></td>
+<td>Máxima flexibilidad, sin compromisos. Facturación por segundo. Ideal para cargas variables o impredecibles.</td>
+<td>Aplicaciones de prueba, cargas con picos irregulares.</td>
+</tr>
+<tr>
+<td><strong>Hosts dedicados</strong></td>
+<td>Servidores físicos dedicados. Permiten aprovechar <strong>licencias propias</strong> (BYOL - Bring Your Own License).</td>
+<td>Cumplimiento normativo, uso de licencias específicas.</td>
+</tr>
+<tr>
+<td><strong>Instancias dedicadas</strong></td>
+<td>Instancias en hardware físico aislado, exclusivo para un solo cliente.</td>
+<td>Requisitos de aislamiento físico, normativas de seguridad estrictas.</td>
+</tr>
+<tr>
+<td><strong>Instancias reservadas</strong></td>
+<td>Compromiso de 1 o 3 años a cambio de descuentos de hasta un <strong>75%</strong>. Opción de <strong>reservas programadas</strong> para horarios fijos.</td>
+<td>Cargas de trabajo estables y predecibles, entornos de producción.</td>
+</tr>
+<tr>
+<td><strong>Instancias de spot</strong></td>
+<td>Aprovechan capacidad no utilizada de EC2 con descuentos de hasta un <strong>90%</strong>. Precios variables según oferta y demanda.</td>
+<td>Procesos batch, big data, machine learning, cargas tolerantes a interrupciones.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué modelos permiten facturación por segundo?</p>
+<p>→ <strong>Instancias bajo demanda, reservadas y spot</strong> (solo en Amazon Linux y Ubuntu).</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cuál es el modelo de menor coste pero con riesgo de interrupción?</p>
+<p>→ <strong>Instancias de spot</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué modelo conviene para entornos de producción con uso estable?</p>
+<p>→ <strong>Instancias reservadas</strong> (1 o 3 años).</p>
+</div>
+<h4 id="optimizacion-de-costes-en-instancias-ec2">Optimización de costes en instancias EC2<a class="headerlink" href="#optimizacion-de-costes-en-instancias-ec2" title="Permanent link">&para;</a></h4>
+<p>Para reducir costes de forma eficiente es necesario revisar los siguientes factores:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adaptación del tamaño</strong></td>
+<td>Seleccionar tipos de instancias adecuados. Utilizar <strong>Amazon CloudWatch</strong> para analizar métricas de rendimiento y evitar el sobredimensionamiento.</td>
+</tr>
+<tr>
+<td><strong>Aumento de elasticidad</strong></td>
+<td>Detener instancias cuando no se usan y habilitar <strong>Auto Scaling</strong> para ajustar recursos según la demanda.</td>
+</tr>
+<tr>
+<td><strong>Modelo de precios óptimo</strong></td>
+<td>Evaluar patrones de uso y combinar opciones de precios: <strong>On-Demand, Reserved, Spot</strong> o considerar soluciones <strong>serverless</strong> como <strong>AWS Lambda</strong>.</td>
+</tr>
+<tr>
+<td><strong>Optimización de almacenamiento</strong></td>
+<td>Ajustar el tamaño de volúmenes <strong>EBS</strong>, eliminar recursos no utilizados y revisar la configuración de almacenamiento para minimizar costes.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio permite identificar si una instancia está sobredimensionada?</p>
+<p>→ <strong>Amazon CloudWatch</strong>.</p>
+</div>
+<h3 id="amazon-cloudwatch">Amazon CloudWatch<a class="headerlink" href="#amazon-cloudwatch" title="Permanent link">&para;</a></h3>
+<p>Servicio de <strong>monitorización y observabilidad</strong> de AWS para recopilar, visualizar y analizar métricas, logs y eventos en tiempo real.</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Función principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Métricas</strong></td>
+<td>Recopila métricas de recursos AWS y personalizadas.</td>
+</tr>
+<tr>
+<td><strong>Alarmas</strong></td>
+<td>Configura alertas y automatiza respuestas.</td>
+</tr>
+<tr>
+<td><strong>Logs</strong></td>
+<td>Centraliza y analiza logs de aplicaciones.</td>
+</tr>
+<tr>
+<td><strong>Dashboards</strong></td>
+<td>Paneles visuales personalizados.</td>
+</tr>
+<tr>
+<td><strong>Eventos</strong></td>
+<td>Automatiza respuestas a eventos (EventBridge).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio permite crear alarmas automáticas basadas en métricas?</p>
+<p>→ <strong>Amazon CloudWatch</strong>.</p>
+</div>
+<h3 id="elastic-container-service-ecs">Elastic Container service (ECS)<a class="headerlink" href="#elastic-container-service-ecs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Servicio de administración de contenedores totalmente gestionado y escalable.</li>
+<li>Compatible con <strong>Docker</strong>.</li>
+<li>Permite desplegar miles de contenedores en minutos.</li>
+<li>Integrado con <strong>Elastic Load Balancing</strong>, <strong>Security Groups</strong>, <strong>IAM Roles</strong> y <strong>volúmenes de almacenamiento</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Modo de ejecución</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EC2</strong></td>
+<td>Los contenedores se ejecutan en instancias EC2 dentro de un clúster. Tú gestionas las instancias.</td>
+</tr>
+<tr>
+<td><strong>Fargate</strong></td>
+<td><strong>Serverless</strong>: AWS gestiona la infraestructura. No necesitas aprovisionar ni administrar servidores.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué opción de ECS elimina la necesidad de gestionar instancias EC2?</p>
+<p>→ <strong>AWS Fargate</strong>.</p>
+</div>
+<h3 id="amazon-elastic-kubernetes-service-eks">Amazon Elastic Kubernetes Service (EKS)<a class="headerlink" href="#amazon-elastic-kubernetes-service-eks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Servicio <strong>gestionado de Kubernetes</strong>.</li>
+<li>Permite ejecutar clústeres de Kubernetes sin preocuparse de la infraestructura del plano de control.</li>
+<li>Compatible con contenedores <strong>Linux</strong> y <strong>Windows</strong>.</li>
+<li>Funciona con las herramientas estándar de la comunidad de Kubernetes.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio usarías si tu empresa ya trabaja con Kubernetes?</p>
+<p>→ <strong>Amazon EKS</strong>.</p>
+</div>
+<h3 id="amazon-elastic-container-registry-ecr">Amazon Elastic Container Registry (ECR)<a class="headerlink" href="#amazon-elastic-container-registry-ecr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Registro privado de contenedores completamente gestionado.</li>
+<li>Permite almacenar, administrar y desplegar <strong>imágenes Docker</strong> de forma segura y eficiente.</li>
+<li>Integración directa con <strong>ECS</strong>, <strong>EKS</strong> y <strong>Fargate</strong>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio facilita la gestión y despliegue de imágenes Docker en AWS?</p>
+<p>→ <strong>Amazon ECR</strong>.</p>
+</div>
+<h3 id="aws-lambda">AWS Lambda<a class="headerlink" href="#aws-lambda" title="Permanent link">&para;</a></h3>
+<p><strong>AWS Lambda</strong> es un servicio de <strong>informática sin servidores (serverless)</strong> que permite ejecutar código sin necesidad de gestionar servidores físicos o virtuales. La ejecución se activa en respuesta a <strong>eventos</strong> y AWS administra automáticamente los recursos necesarios.</p>
+<h4 id="caracteristicas-principales">Características principales<a class="headerlink" href="#caracteristicas-principales" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Detalles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo de ejecución</strong></td>
+<td>Basado en eventos (Event-driven).</td>
+</tr>
+<tr>
+<td><strong>Modelo de pago</strong></td>
+<td>Pago por uso, en incrementos de <strong>100 ms</strong>. Sin coste cuando no se ejecuta código.</td>
+</tr>
+<tr>
+<td><strong>Lenguajes compatibles</strong></td>
+<td>Java, Go, C#, Python, Node.js, entre otros.</td>
+</tr>
+<tr>
+<td><strong>Alta disponibilidad</strong></td>
+<td>Tolerante a fallos y escalabilidad automática.</td>
+</tr>
+<tr>
+<td><strong>Integraciones nativas</strong></td>
+<td>Con servicios como <strong>S3, DynamoDB, SQS, API Gateway, CloudWatch</strong>, entre otros.</td>
+</tr>
+<tr>
+<td><strong>Orquestación de flujos</strong></td>
+<td>Mediante <strong>AWS Step Functions</strong> para coordinar funciones Lambda.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ejemplos-de-activadores-de-lambda">Ejemplos de activadores de Lambda<a class="headerlink" href="#ejemplos-de-activadores-de-lambda" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sube de archivos a <strong>Amazon S3</strong>.</li>
+<li>Nuevos registros en <strong>DynamoDB Streams</strong>.</li>
+<li>Mensajes en colas de <strong>Amazon SQS</strong>.</li>
+<li>Peticiones HTTP a través de <strong>API Gateway</strong>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Cuándo se paga por AWS Lambda?</p>
+<p>→ Solo cuando se ejecuta el código, en bloques de <strong>100 milisegundos</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio permite coordinar flujos de trabajo de múltiples funciones Lambda?</p>
+<p>→ <strong>AWS Step Functions</strong>.</p>
+</div>
+<h3 id="aws-elastic-beanstalk">AWS Elastic Beanstalk<a class="headerlink" href="#aws-elastic-beanstalk" title="Permanent link">&para;</a></h3>
+<p><strong>AWS Elastic Beanstalk</strong> es un servicio de tipo <strong>PaaS (Platform as a Service)</strong> que permite implementar, gestionar y escalar aplicaciones web de forma sencilla, sin preocuparse por la infraestructura subyacente.</p>
+<h4 id="caracteristicas-principales_1">Características principales<a class="headerlink" href="#caracteristicas-principales_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Detalles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo de servicio</strong></td>
+<td>PaaS (Plataforma como servicio).</td>
+</tr>
+<tr>
+<td><strong>Gestión</strong></td>
+<td>AWS se encarga de la infraestructura, balanceo de carga, escalado automático, monitoreo y logs.</td>
+</tr>
+<tr>
+<td><strong>Modelo de pago</strong></td>
+<td>Solo se paga por los recursos subyacentes (EC2, RDS, etc.), no por usar Beanstalk.</td>
+</tr>
+<tr>
+<td><strong>Lenguajes soportados</strong></td>
+<td>Java, .NET, PHP, Node.js, Python, Ruby, Go, Docker.</td>
+</tr>
+<tr>
+<td><strong>Entornos de ejecución</strong></td>
+<td>Apache Tomcat, Apache HTTP Server, Nginx, Passenger, Puma, IIS, según el lenguaje.</td>
+</tr>
+<tr>
+<td><strong>Escalabilidad</strong></td>
+<td>Automática, según la demanda. Se puede seleccionar el tipo de instancia EC2.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué responsabilidad mantiene el usuario al usar Elastic Beanstalk?</p>
+<p>→ Solo debe <strong>desarrollar y subir el código</strong>, AWS gestiona el resto.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Se paga por el uso de Elastic Beanstalk como servicio?</p>
+<p>→ <strong>No</strong>, solo por los recursos que consume (instancias EC2, almacenamiento, etc.).</p>
+</div>
+<h2 id="3-servicios-de-almacenamiento">3. Servicios de almacenamiento<a class="headerlink" href="#3-servicios-de-almacenamiento" title="Permanent link">&para;</a></h2>
+<h3 id="amazon-ebs-elastic-block-store">Amazon EBS (Elastic Block Store)<a class="headerlink" href="#amazon-ebs-elastic-block-store" title="Permanent link">&para;</a></h3>
+<p><strong>Amazon EBS</strong> es un servicio de <strong>almacenamiento en bloques</strong> diseñado para ser utilizado con instancias de <strong>Amazon EC2</strong>. Proporciona almacenamiento persistente, lo que significa que los datos se conservan incluso después de detener o finalizar una instancia.</p>
+<h4 id="caracteristicas-principales_2">Características principales<a class="headerlink" href="#caracteristicas-principales_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Detalles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tipo de almacenamiento</strong></td>
+<td>En bloques (Block Storage), similar a un disco duro tradicional.</td>
+</tr>
+<tr>
+<td><strong>Persistencia</strong></td>
+<td>Los datos se mantienen incluso si la instancia EC2 se apaga o termina.</td>
+</tr>
+<tr>
+<td><strong>Replicación</strong></td>
+<td>Automática dentro de la misma zona de disponibilidad para alta disponibilidad.</td>
+</tr>
+<tr>
+<td><strong>Escalabilidad</strong></td>
+<td>Se puede ampliar o reducir la capacidad en minutos.</td>
+</tr>
+<tr>
+<td><strong>Modelo de pago</strong></td>
+<td>Pago por el almacenamiento aprovisionado.</td>
+</tr>
+<tr>
+<td><strong>Cifrado</strong></td>
+<td>Disponible de forma nativa para todos los volúmenes.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="tipos-de-volumenes">Tipos de volúmenes<a class="headerlink" href="#tipos-de-volumenes" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tipo de volumen</th>
+<th>Descripción</th>
+<th>Casos de uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SSD (gp3, io1, io2)</strong></td>
+<td>Alta IOPS y baja latencia.</td>
+<td>Bases de datos, aplicaciones críticas, sistemas transaccionales.</td>
+</tr>
+<tr>
+<td><strong>HDD (st1, sc1)</strong></td>
+<td>Mayor capacidad a menor coste, rendimiento secuencial.</td>
+<td>Big data, cargas de trabajo de acceso poco frecuente.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="copias-de-seguridad">Copias de seguridad<a class="headerlink" href="#copias-de-seguridad" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Las copias de seguridad de EBS se llaman <strong>instantáneas (Snapshots)</strong>.</li>
+<li>Se almacenan en <strong>Amazon S3</strong> y permiten restaurar volúmenes o crear nuevas instancias EC2 a partir de ellas.</li>
+<li>Las <strong>Amazon Machine Images (AMIs)</strong> también incluyen los volúmenes EBS para facilitar la creación de nuevas instancias preconfiguradas.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué mecanismo se usa para realizar copias de seguridad de EBS?</p>
+<p>→ <strong>Snapshots (instantáneas)</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Qué tipo de almacenamiento usarías para bases de datos en EC2?</p>
+<p>→ <strong>EBS con volúmenes SSD (gp3, io1, io2)</strong>.</p>
+</div>
+<h3 id="amazon-s3-simple-storage-service">Amazon S3 (Simple Storage Service)<a class="headerlink" href="#amazon-s3-simple-storage-service" title="Permanent link">&para;</a></h3>
+<p><strong>Amazon S3</strong> es un servicio de <strong>almacenamiento de objetos</strong> completamente gestionado y altamente escalable. Permite almacenar y recuperar cualquier cantidad de datos desde cualquier lugar, sin necesidad de gestionar servidores.</p>
+<h4 id="caracteristicas-principales_3">Características principales<a class="headerlink" href="#caracteristicas-principales_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Detalles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo de almacenamiento</strong></td>
+<td>Basado en objetos (hasta <strong>5 TB</strong> por objeto).</td>
+</tr>
+<tr>
+<td><strong>Durabilidad</strong></td>
+<td><strong>99.999999999% (11 nueves)</strong>.</td>
+</tr>
+<tr>
+<td><strong>Seguridad</strong></td>
+<td>Cifrado en reposo y en tránsito, acceso privado por defecto.</td>
+</tr>
+<tr>
+<td><strong>Acceso</strong></td>
+<td>Consola AWS, API, SDKs, CLI y herramientas de terceros.</td>
+</tr>
+<tr>
+<td><strong>Escalabilidad</strong></td>
+<td>Automática y sin límite práctico de almacenamiento.</td>
+</tr>
+<tr>
+<td><strong>Notificaciones</strong></td>
+<td>Puede generar eventos para notificar o activar procesos (ej. AWS Lambda).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clases-de-almacenamiento-de-s3">Clases de almacenamiento de S3<a class="headerlink" href="#clases-de-almacenamiento-de-s3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Clase</th>
+<th>Uso recomendado</th>
+<th>Latencia</th>
+<th>Coste</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S3 Standard</td>
+<td>Acceso frecuente a datos activos.</td>
+<td>Milisegundos</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>S3 Intelligent-Tiering (INT)</td>
+<td>Datos con patrones de acceso variables.</td>
+<td>Milisegundos</td>
+<td>Variable</td>
+</tr>
+<tr>
+<td>S3 Standard-IA (S-IA)</td>
+<td>Datos poco accedidos, acceso rápido.</td>
+<td>Milisegundos</td>
+<td>Bajo (+ fee de recuperación)</td>
+</tr>
+<tr>
+<td>S3 One Zone-IA (Z-IA)</td>
+<td>Datos infrecuentes, menor disponibilidad.</td>
+<td>Milisegundos</td>
+<td>Más bajo</td>
+</tr>
+<tr>
+<td>S3 Glacier</td>
+<td>Archivado a largo plazo.</td>
+<td>Minutos / Horas</td>
+<td>Muy bajo</td>
+</tr>
+<tr>
+<td>S3 Glacier Deep Archive</td>
+<td>Archivado muy a largo plazo.</td>
+<td>Horas</td>
+<td>Más económico</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué clase de almacenamiento es ideal para copias de seguridad antiguas que rara vez se consultan?</p>
+<p>→ <strong>S3 Glacier Deep Archive</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Los buckets de S3 son públicos por defecto?</p>
+<p>→ <strong>No</strong>, por defecto son privados y requieren configuraciones explícitas para acceso público.</p>
+</div>
+<h3 id="amazon-efs-elastic-file-system">Amazon EFS (Elastic File System)<a class="headerlink" href="#amazon-efs-elastic-file-system" title="Permanent link">&para;</a></h3>
+<p>Amazon EFS es un servicio de almacenamiento en la nube de tipo sistema de archivos que proporciona un almacenamiento compartido, escalable y totalmente gestionado. Permite a múltiples instancias EC2 y otros servicios de AWS acceder de forma simultánea a los mismos archivos.</p>
+<h4 id="caracteristicas-principales_4">Características principales<a class="headerlink" href="#caracteristicas-principales_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Detalles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modelo de almacenamiento</td>
+<td>Sistema de archivos (NFS).</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>Automática, desde gigabytes hasta petabytes.</td>
+</tr>
+<tr>
+<td>Acceso simultáneo</td>
+<td>Cientos de instancias EC2 pueden acceder al mismo sistema de archivos.</td>
+</tr>
+<tr>
+<td>Casos de uso</td>
+<td>Big data, análisis, procesamiento multimedia, servidores web, almacenamiento de directorios.</td>
+</tr>
+<tr>
+<td>Alta disponibilidad</td>
+<td>Sí, datos replicados entre zonas de disponibilidad.</td>
+</tr>
+<tr>
+<td>Modelo de pago</td>
+<td>Pago solo por el almacenamiento utilizado, sin tarifas mínimas.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">¿Qué servicio de almacenamiento permite acceso compartido a través de NFS?</p>
+<p>→ Amazon EFS.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">¿Cómo se factura EFS?</p>
+<p>→ Solo por el almacenamiento utilizado, sin costes de aprovisionamiento.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; Carlos Grande - 2025
+                </div>
+                
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.tracking", "navigation.tabs", "navigation.instant", "navigation.sections", "navigation.footer", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown_init.js"></script>
+      
+    
+  </body>
+</html>

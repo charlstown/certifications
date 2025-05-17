@@ -1,0 +1,1998 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cuaderno de notas para las certificaciones AZ-900 y AWS Fundamentals del curso DevOps de UNIR.">
+      
+      
+        <meta name="author" content="charlstown">
+      
+      
+      
+        <link rel="prev" href="../modulo-2/">
+      
+      
+        <link rel="next" href="../modulo-4/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>M3 - Soluciones principales - Certificaciones Azure-AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-soluciones-principales" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-header__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificaciones Azure-AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M3 - Soluciones principales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AZ 900
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../aws-cloud-practicioner/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AWS Cloud Practicioner
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-nav__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    Certificaciones Azure-AWS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AZ 900
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AZ 900
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-soluciones-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Soluciones principales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Soluciones principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iot-internet-of-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      IoT (Internet of Things)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inteligencia Artificial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless Computing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevOps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-herramientas-de-administracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Herramientas de administración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Herramientas de administración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-administracion-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas de administración I
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-administracion-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas de administración II
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../aws-cloud-practicioner/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AWS Cloud Practicioner
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Cloud Practicioner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios cómputo y almacenamiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Facturación, precios y soporte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Seguridad y cumplimiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/test-ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test de ejemplo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-soluciones-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Soluciones principales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Soluciones principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iot-internet-of-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      IoT (Internet of Things)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inteligencia-artificial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inteligencia Artificial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serverless Computing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevOps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-herramientas-de-administracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Herramientas de administración
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Herramientas de administración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-administracion-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas de administración I
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-de-administracion-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas de administración II
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="m3-soluciones-principales">M3 - Soluciones principales<a class="headerlink" href="#m3-soluciones-principales" title="Permanent link">&para;</a></h1>
+<h2 id="1-soluciones-principales">1. Soluciones principales<a class="headerlink" href="#1-soluciones-principales" title="Permanent link">&para;</a></h2>
+<h3 id="iot-internet-of-things">IoT (Internet of Things)<a class="headerlink" href="#iot-internet-of-things" title="Permanent link">&para;</a></h3>
+<p>Dispositivos convencionales que recopilan y envían constantemente información a la nube.</p>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure IoT Central</strong></td>
+<td><strong><em>SaaS</em></strong></td>
+<td>Plataforma que te permite conectar y gestionar dispositivos IoT sin escribir casi nada de código.</td>
+</tr>
+<tr>
+<td><strong>Azure IoT Hub</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Servicio base para recibir, enviar y autenticar mensajes de millones de dispositivos IoT. Tú construyes encima.</td>
+</tr>
+<tr>
+<td><strong>Azure Sphere</strong></td>
+<td><strong><em>ND</em></strong></td>
+<td>Solución hardware + software para crear dispositivos IoT seguros desde el chip, con su propio sistema operativo.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>IoT Central</strong>: solución lista para usar. Ojo, si la pregunta dice algo como “sin escribir código”, esta es la opción correcta.</li>
+<li><strong>IoT Hub</strong>: suele aparecer como la opción más flexible. Si en la pregunta se menciona integración con sistemas externos, autenticación por dispositivo o millones de mensajes al día, es esta.</li>
+<li><strong>Azure Sphere</strong>: no es servicio en la nube. Si ves algo de seguridad en hardware, esta es la clave.</li>
+</ul>
+</div>
+<h3 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure Synapse Analytics</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Plataforma analítica que combina almacenamiento de datos y análisis en tiempo real con SQL o Spark. Ideal para BI y reporting.</td>
+</tr>
+<tr>
+<td><strong>Azure HDInsight</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Servicio que permite usar clústeres de tecnologías Big Data como Hadoop, Spark o Kafka ya configurados.</td>
+</tr>
+<tr>
+<td><strong>Azure Databricks</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Entorno colaborativo basado en Apache Spark para análisis avanzado y machine learning, optimizado para Azure.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Synapse</strong>: atención, puede confundirse con Databricks. Si la pregunta menciona consultas SQL, integración con Power BI o almacenamiento analítico, es Synapse.</li>
+<li><strong>HDInsight</strong>: si ves tecnologías específicas como Hadoop, Spark o Kafka, esta es la respuesta. Suele usarse para mantener compatibilidad con herramientas Big Data ya existentes.</li>
+<li><strong>Databricks</strong>: si la pregunta menciona ciencia de datos colaborativa, notebooks o entrenamiento de modelos Spark, apunta a esta.</li>
+</ul>
+</div>
+<h3 id="inteligencia-artificial">Inteligencia Artificial<a class="headerlink" href="#inteligencia-artificial" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure Machine Learning</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Plataforma para entrenar, desplegar y gestionar modelos de machine learning a escala.</td>
+</tr>
+<tr>
+<td><strong>Cognitive Services</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>APIs listas para usar que permiten añadir visión, lenguaje, voz y análisis de texto sin entrenar modelos.</td>
+</tr>
+<tr>
+<td><strong>Azure Bot Service</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Servicio para crear, conectar y gestionar bots que interactúan con usuarios a través de canales como Teams, web o Telegram.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Azure Machine Learning</strong>: si ves una pregunta sobre entrenar un modelo personalizado, elegir este.</li>
+<li><strong>Cognitive Services</strong>: importante: son APIs preentrenadas, no necesitas datos ni entrenamiento. En preguntas sobre visión por computadora, análisis de texto, voz o traducción automática, suelen ir por aquí.</li>
+<li><strong>Bot Service</strong>: si ves una opción que implica interacción con usuarios y texto hablado o escrito, esta es la correcta. Puede integrarse con Cognitive Services para tener respuestas inteligentes.</li>
+</ul>
+</div>
+<h3 id="serverless-computing">Serverless Computing<a class="headerlink" href="#serverless-computing" title="Permanent link">&para;</a></h3>
+<p>Modelo en el que no gestionas la infraestructura, solo te centras en el código o lógica del flujo. La escalabilidad es automática y solo pagas por el tiempo de ejecución.</p>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure Functions</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Ejecuta código en respuesta a eventos sin gestionar servidores. Ideal para tareas pequeñas o automatizaciones.</td>
+</tr>
+<tr>
+<td><strong>Azure Logic Apps</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Automatiza flujos de trabajo con conectores sin escribir código. Ideal para integraciones entre servicios.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<p>Ambos son considerados servicios <em>serverless</em>, pero:
+- <strong>Functions</strong> es más para desarrolladores (código).
+- <strong>Logic Apps</strong> es más visual y orientado a usuarios no técnicos.</p>
+</div>
+<h3 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure DevOps</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Conjunto de servicios para gestión de proyectos, repositorios, CI/CD y testing. Ideal para equipos organizados en Azure.</td>
+</tr>
+<tr>
+<td><strong>GitHub Actions</strong></td>
+<td><strong><em>SaaS</em></strong></td>
+<td>Herramienta de automatización de flujos CI/CD integrada en GitHub. Ejecuta acciones tras commits, pull requests, etc.</td>
+</tr>
+<tr>
+<td><strong>Azure DevTest Labs</strong></td>
+<td><strong><em>ND</em></strong></td>
+<td>Servicio para crear entornos de desarrollo y pruebas de forma rápida y controlada, optimizando costes.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Azure DevOps</strong>: ojo con las preguntas donde se mencionan <em>repositorios</em>, <em>pipelines</em> o <em>entrega continua</em>. Muy importante: Azure DevOps se puede usar <strong>con código que no esté en Azure</strong>, incluso con AWS o on-premises.</li>
+<li><strong>GitHub Actions</strong>: si aparece una pregunta que menciona GitHub directamente, esta será la opción CI/CD correcta. Cada vez más usada, pero <strong>Azure DevOps sigue siendo más completo</strong> en funcionalidades.</li>
+<li><strong>DevTest Labs</strong>: cuidado con preguntas sobre <strong>optimizar costes en entornos de desarrollo y pruebas</strong>. Este servicio permite autoapagado de máquinas y límites por usuario, suele aparecer como trampa frente a una VM suelta.</li>
+</ul>
+</div>
+<h2 id="2-herramientas-de-administracion">2. Herramientas de administración<a class="headerlink" href="#2-herramientas-de-administracion" title="Permanent link">&para;</a></h2>
+<h3 id="herramientas-de-administracion-i">Herramientas de administración I<a class="headerlink" href="#herramientas-de-administracion-i" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure Portal</strong></td>
+<td>Interfaz web gráfica para gestionar y visualizar todos los recursos de Azure.</td>
+</tr>
+<tr>
+<td><strong>Azure Mobile App</strong></td>
+<td>Aplicación móvil para monitorizar recursos de Azure y recibir alertas desde el móvil.</td>
+</tr>
+<tr>
+<td><strong>API REST Azure</strong></td>
+<td>Permite interactuar programáticamente con los servicios de Azure mediante peticiones HTTP.</td>
+</tr>
+<tr>
+<td><strong>Azure PowerShell</strong></td>
+<td>Herramienta de línea de comandos basada en PowerShell para automatizar tareas en Azure.</td>
+</tr>
+<tr>
+<td><strong>CLI</strong></td>
+<td>Herramienta de línea de comandos multiplataforma para gestionar recursos de Azure desde la terminal.</td>
+</tr>
+<tr>
+<td><strong>Azure Cloud Shell</strong></td>
+<td>Consola accesible desde el navegador con CLI y PowerShell preinstalados, sin necesidad de configuración local.</td>
+</tr>
+<tr>
+<td><strong>Azure Resource Manager</strong></td>
+<td>Motor de despliegue y gestión que procesa todas las solicitudes para crear, actualizar o eliminar recursos en Azure.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Azure Portal</strong> es la opción correcta cuando se pregunta por una interfaz gráfica basada en navegador.</li>
+<li><strong>CLI</strong> y <strong>Azure PowerShell</strong> suelen aparecer en preguntas sobre automatización. Recuerda: CLI es más universal (funciona en Windows, macOS, Linux), PowerShell está más integrado con el entorno Microsoft.</li>
+<li><strong>Azure Cloud Shell</strong> permite usar CLI o PowerShell <strong>desde el propio portal</strong>, sin instalar nada. Si ves algo como “sin configurar herramientas localmente”, es esta.</li>
+<li><strong>API REST</strong> se menciona en preguntas sobre integraciones programáticas desde apps externas.</li>
+<li><strong>Azure Resource Manager (ARM)</strong> es clave: si la pregunta menciona plantillas, control de dependencias o despliegues consistentes, es ARM.</li>
+</ul>
+</div>
+<h3 id="herramientas-de-administracion-ii">Herramientas de administración II<a class="headerlink" href="#herramientas-de-administracion-ii" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Función principal</th>
+<th>Claves para el examen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure Advisor</strong></td>
+<td>Da recomendaciones personalizadas para optimizar tus recursos</td>
+<td>Buenas prácticas: coste, rendimiento, seguridad. No lo confundas con Monitor (métricas) o Policy (reglas).</td>
+</tr>
+<tr>
+<td><strong>Azure Monitor</strong></td>
+<td>Supervisa métricas y logs de recursos</td>
+<td>Si ves alertas, métricas o diagnósticos, es Monitor. No lo confundas con Advisor, Policy o Network Watcher.</td>
+</tr>
+<tr>
+<td><strong>Azure Service Health</strong></td>
+<td>Informa sobre incidencias o mantenimiento en servicios de Azure</td>
+<td>Notificaciones sobre interrupciones. Si es personalizado por suscripción, es este (no Azure Status Page).</td>
+</tr>
+<tr>
+<td><strong>Plantillas ARM</strong></td>
+<td>Define infra como código en JSON para desplegar recursos</td>
+<td>Modelo declarativo. Preguntas sobre automatización e IaC. ARM es nativo, Terraform es multicloud.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="azure-advisor">Azure Advisor<a class="headerlink" href="#azure-advisor" title="Permanent link">&para;</a></h4>
+<p>Servicio que analiza tu configuración y uso de recursos en Azure y te da recomendaciones personalizadas para mejorar rendimiento, seguridad, fiabilidad, optimización de costes y excelencia operativa.</p>
+<ul>
+<li>Seguridad</li>
+<li>Rendimiento</li>
+<li>Optimización de coste</li>
+<li>Excelencia operativa.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Azure Advisor</strong> aparece en preguntas sobre recomendaciones de buenas prácticas.  </li>
+<li>Si ves algo como “sugerencias para reducir costes” o “mejorar seguridad y rendimiento”, esta es la respuesta correcta.  </li>
+<li>No confundir con <strong>Azure Monitor</strong> (recoge métricas) o <strong>Azure Policy</strong> (impone reglas).</li>
+</ul>
+</div>
+<h4 id="azure-monitor">Azure Monitor<a class="headerlink" href="#azure-monitor" title="Permanent link">&para;</a></h4>
+<p>Servicio que recopila, analiza y visualiza métricas y logs de los recursos en Azure (y externos) para ayudarte a supervisar el estado, rendimiento y disponibilidad de tus aplicaciones e infraestructura.</p>
+<ul>
+<li>Métricas (por ejemplo, uso de CPU, latencia)</li>
+<li>Logs (eventos, diagnósticos)</li>
+<li>Alertas</li>
+<li>Paneles e integración con otras herramientas (como Log Analytics o Grafana)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Azure Monitor</strong> aparece en preguntas sobre supervisión, alertas o visualización de métricas y logs.  </li>
+<li>Si la pregunta menciona “detectar problemas de rendimiento” o “generar alertas en tiempo real”, es Monitor.  </li>
+<li>No confundir con <strong>Azure Advisor</strong> (da recomendaciones), ni con <strong>Azure Policy</strong> (aplica reglas), ni con <strong>Network Watcher</strong> (monitoriza redes).</li>
+</ul>
+</div>
+<h4 id="azure-service-health">Azure Service Health<a class="headerlink" href="#azure-service-health" title="Permanent link">&para;</a></h4>
+<p>Servicio que informa sobre el estado de los servicios de Azure y notifica incidentes, mantenimientos programados o cambios que puedan afectar a tus recursos.</p>
+<ul>
+<li>Alertas de incidentes activos</li>
+<li>Información sobre mantenimiento planificado</li>
+<li>Historial de problemas en tu región o servicios usados</li>
+<li>Integración con alertas personalizadas</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Azure Service Health</strong> aparece en preguntas sobre <strong>incidentes o mantenimiento que afectan a servicios de Azure</strong>.  </li>
+<li>Si ves algo como “informar a los equipos de caídas o interrupciones”, esta es la opción correcta.  </li>
+<li>No confundir con <strong>Azure Monitor</strong> (supervisa tus recursos), ni con <strong>Azure Status Page</strong>, que muestra el estado global de Azure pero no personalizado a tu suscripción.</li>
+</ul>
+</div>
+<h4 id="plantillas-arm">Plantillas ARM<a class="headerlink" href="#plantillas-arm" title="Permanent link">&para;</a></h4>
+<p>Plantillas ARM (Azure Resource Manager) son archivos en formato JSON que definen la infraestructura y configuración de recursos en Azure de forma declarativa, permitiendo despliegues repetibles y consistentes.</p>
+<ul>
+<li>Infraestructura como código (IaC)
+- Despliegues automáticos y controlados</li>
+<li>Se pueden versionar y reutilizar</li>
+<li>Permiten definir dependencias entre recursos</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Nota para el examen</p>
+<ul>
+<li><strong>Plantillas ARM</strong> suelen aparecer en preguntas sobre <strong>despliegues consistentes</strong>, <strong>automatización</strong> o <strong>infraestructura como código</strong>.  </li>
+<li>Recuerda: definen <em>qué</em> recursos quieres, no <em>cómo</em> se crean (modelo declarativo).  </li>
+<li>No confundir con <strong>Azure Bicep</strong> (lenguaje simplificado que genera plantillas ARM), ni con scripts CLI o PowerShell (modelo imperativo).  </li>
+<li><strong>Diferencia con Terraform</strong>: ARM es nativo de Azure, mientras que Terraform es una herramienta de terceros que permite gestionar recursos de múltiples nubes, no solo Azure.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; Carlos Grande - 2025
+                </div>
+                
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.tracking", "navigation.tabs", "navigation.instant", "navigation.sections", "navigation.footer", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown_init.js"></script>
+      
+    
+  </body>
+</html>

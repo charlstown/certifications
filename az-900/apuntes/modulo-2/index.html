@@ -1,0 +1,2080 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cuaderno de notas para las certificaciones AZ-900 y AWS Fundamentals del curso DevOps de UNIR.">
+      
+      
+        <meta name="author" content="charlstown">
+      
+      
+      
+        <link rel="prev" href="../modulo-1/">
+      
+      
+        <link rel="next" href="../modulo-3/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>M2 - Servicios principales - Certificaciones Azure-AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-componentes-arquitectonicos-principales-azure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-header__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Certificaciones Azure-AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M2 - Servicios principales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AZ 900
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../aws-cloud-practicioner/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AWS Cloud Practicioner
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Certificaciones Azure-AWS" class="md-nav__button md-logo" aria-label="Certificaciones Azure-AWS" data-md-component="logo">
+      
+  <img src="../../../assets/images/favicon.svg" alt="logo">
+
+    </a>
+    Certificaciones Azure-AWS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/charlstown/unir-certifications" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AZ 900
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AZ 900
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-componentes-arquitectonicos-principales-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Componentes Arquitectónicos principales Azure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Componentes Arquitectónicos principales Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-global-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura global Azure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zonas-y-conjuntos-de-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zonas y conjuntos de disponibilidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conjuntos-de-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conjuntos de disponibilidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Azure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-productos-principales-de-carga-de-trabajo-azure-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Productos principales de carga de trabajo Azure 14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Productos principales de carga de trabajo Azure 14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-computo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de cómputo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de almacenamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de bases de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Marketplace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#politicas-de-redundancia-de-backup-en-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Políticas de redundancia de backup en Azure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M5 - Gobierno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/modulo-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M6 - Precios y ciclo de vida
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../aws-cloud-practicioner/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AWS Cloud Practicioner
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Cloud Practicioner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Apuntes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apuntes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Servicios cómputo y almacenamiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Servicios principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/apuntes/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Facturación, precios y soporte
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/examen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M1 - Conceptos de la nube
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M2 - Seguridad y cumplimiento
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M3 - Soluciones principales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/modulo-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    M4 - Seguridad
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/repaso-general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Repaso general
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws-cloud-practicioner/tests/test-ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test de ejemplo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-componentes-arquitectonicos-principales-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Componentes Arquitectónicos principales Azure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Componentes Arquitectónicos principales Azure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-global-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura global Azure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zonas-y-conjuntos-de-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zonas y conjuntos de disponibilidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conjuntos-de-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conjuntos de disponibilidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Azure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-productos-principales-de-carga-de-trabajo-azure-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Productos principales de carga de trabajo Azure 14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Productos principales de carga de trabajo Azure 14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-computo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de cómputo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de Red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de almacenamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicios-de-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios de bases de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-marketplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Marketplace
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#politicas-de-redundancia-de-backup-en-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Políticas de redundancia de backup en Azure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="m2-servicios-principales">M2 - Servicios principales<a class="headerlink" href="#m2-servicios-principales" title="Permanent link">&para;</a></h1>
+<h2 id="1-componentes-arquitectonicos-principales-azure">1. Componentes Arquitectónicos principales Azure<a class="headerlink" href="#1-componentes-arquitectonicos-principales-azure" title="Permanent link">&para;</a></h2>
+<h3 id="arquitectura-global-azure">Arquitectura global Azure<a class="headerlink" href="#arquitectura-global-azure" title="Permanent link">&para;</a></h3>
+<p>La arquitectura global de Azure se organiza en una jerarquía para ofrecer alta disponibilidad, escalabilidad y tolerancia a fallos:</p>
+<ul>
+<li><strong>Geografías:</strong> agrupaciones de regiones que cumplen requisitos legales y de residencia de datos.</li>
+<li><strong>Regiones:</strong> áreas físicas (como "Europa Occidental") que contienen varios centros de datos.</li>
+</ul>
+<p><img alt="" src="../assets/arquitecturas-azure.png" /></p>
+<h3 id="zonas-y-conjuntos-de-disponibilidad">Zonas y conjuntos de disponibilidad<a class="headerlink" href="#zonas-y-conjuntos-de-disponibilidad" title="Permanent link">&para;</a></h3>
+<p>Son ubicaciones físicas independientes dentro de una región, cada una con uno o más CPDs (Centros de Procesamiento de Datos).</p>
+<ul>
+<li>Cada región suele tener al menos <strong>3 zonas de disponibilidad separadas físicamente</strong> (mínimo 500 km entre regiones).</li>
+</ul>
+<h3 id="conjuntos-de-disponibilidad">Conjuntos de disponibilidad<a class="headerlink" href="#conjuntos-de-disponibilidad" title="Permanent link">&para;</a></h3>
+<p>Permiten mantener las aplicaciones disponibles durante ventanas de mantenimiento o ante errores de hardware.</p>
+<ul>
+<li><strong>Dominios de actualización</strong> (<strong><em>Update Domains, UD</em></strong>), de modo que las operaciones de mantenimiento programado, actualizaciones por cuestiones de rendimiento o seguridad se secuencian a través de os dominios de actualización.</li>
+<li><strong>Dominios de error</strong> (<strong><em>Fault Domains, FD</em></strong>), que proporcionan separación física de cargas de trabajo distribuidas a través del hardware del centro de datos.</li>
+</ul>
+<h3 id="componentes-azure">Componentes Azure<a class="headerlink" href="#componentes-azure" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Descripción</th>
+<th>Consideraciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recurso</strong></td>
+<td>Elemento individual de Azure como una VM, base de datos, red, etc.</td>
+<td>Es la unidad más básica. Se despliega en una ubicación concreta.</td>
+</tr>
+<tr>
+<td><strong>Grupo de recursos</strong></td>
+<td>Contenedor lógico que agrupa varios recursos relacionados</td>
+<td>Pueden estar en diferentes regiones aunque estén en el mismo grupo.</td>
+</tr>
+<tr>
+<td><strong>Subscripción</strong></td>
+<td>Unidad organizativa que agrupa grupos de recursos y define límites de uso</td>
+<td>Puede tener asociadas otras subscripciones para separar entornos y una principal.</td>
+</tr>
+<tr>
+<td><strong>Administrador de recursos</strong></td>
+<td>Servicio que permite crear, actualizar y eliminar recursos de Azure</td>
+<td>Es la interfaz que interpreta las plantillas ARM y gestiona el ciclo de vida.</td>
+</tr>
+<tr>
+<td><strong>Grupos de administración</strong></td>
+<td>Contenedores que agrupan suscripciones para aplicar políticas comunes</td>
+<td>Facilitan la gobernanza y el control a gran escala en múltiples suscripciones.</td>
+</tr>
+<tr>
+<td><strong>Azure Portal</strong></td>
+<td>Interfaz web gráfica para interactuar con los servicios de Azure</td>
+<td>Permite gestionar recursos, ver métricas, configurar alertas, etc.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-productos-principales-de-carga-de-trabajo-azure-14">2. Productos principales de carga de trabajo Azure 14<a class="headerlink" href="#2-productos-principales-de-carga-de-trabajo-azure-14" title="Permanent link">&para;</a></h2>
+<h3 id="servicios-de-computo">Servicios de cómputo<a class="headerlink" href="#servicios-de-computo" title="Permanent link">&para;</a></h3>
+<p>Servicios para cargas de servicios genéricas desde contenedores y máquinas virtuales</p>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Az Virtual Machines</strong></td>
+<td><strong><em>IaaS</em></strong></td>
+<td>Máquinas virtuales completas en la nube, con control total sobre el sistema operativo y software.</td>
+</tr>
+<tr>
+<td><strong>Az App Service</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Servicio gestionado para desplegar aplicaciones web y APIs sin preocuparse por la infraestructura.</td>
+</tr>
+<tr>
+<td><strong>Az Container Service</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Plataforma para ejecutar y gestionar contenedores (Azure Container Instances o Azure Kubernetes Service).</td>
+</tr>
+<tr>
+<td><strong>Azure Virtual Desktop</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Infraestructura de escritorio virtual que permite acceder de forma remota a escritorios y apps Windows en la nube.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="comparativa">Comparativa<a class="headerlink" href="#comparativa" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Nivel de control</th>
+<th>Ideal para</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>App Service</strong></td>
+<td>Bajo</td>
+<td>Webs y APIs gestionadas</td>
+</tr>
+<tr>
+<td><strong>Azure Container Instances (ACI)</strong></td>
+<td>Medio-Bajo</td>
+<td>Contenedores rápidos y sueltos</td>
+</tr>
+<tr>
+<td><strong>Azure Kubernetes Service (AKS)</strong></td>
+<td>Alto</td>
+<td>Arquitecturas de microservicios</td>
+</tr>
+<tr>
+<td><strong>Azure Functions</strong></td>
+<td>Muy bajo</td>
+<td>Scripts/eventos sin preocuparte de nada</td>
+</tr>
+</tbody>
+</table>
+<h3 id="servicios-de-red">Servicios de Red<a class="headerlink" href="#servicios-de-red" title="Permanent link">&para;</a></h3>
+<p>Son recursos para crear redes virtuales e interconectar sistemas.</p>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure Virtual Network</strong></td>
+<td><strong><em>IaaS</em></strong></td>
+<td>Red privada en la nube que permite conectar y aislar recursos de Azure.</td>
+</tr>
+<tr>
+<td><strong>Virtual Private Network gateway (VPN)</strong></td>
+<td><strong><em>IaaS</em></strong></td>
+<td>Dispositivo virtual que permite conexiones seguras entre redes mediante VPN.</td>
+</tr>
+<tr>
+<td><strong>Azure ExpressRoute</strong></td>
+<td><strong><em>IaaS</em></strong></td>
+<td>Conexión privada y dedicada entre tu red local y Azure, fuera de Internet.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="servicios-de-almacenamiento">Servicios de almacenamiento<a class="headerlink" href="#servicios-de-almacenamiento" title="Permanent link">&para;</a></h3>
+<p>Ofrecen recursos para almacenar información.</p>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blob storage</strong></td>
+<td><strong><em>IaaS</em></strong></td>
+<td>Almacenamiento de objetos no estructurados como imágenes, vídeos o backups.</td>
+</tr>
+<tr>
+<td><strong>Disk storage</strong></td>
+<td><strong><em>IaaS</em></strong></td>
+<td>Discos virtuales que se usan con máquinas virtuales, similar a un disco duro.</td>
+</tr>
+<tr>
+<td><strong>Azure files</strong></td>
+<td><strong><em>IaaS</em></strong></td>
+<td>Almacenamiento compartido accesible mediante el protocolo SMB, como un NAS.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="niveles-de-almacenamiento">Niveles de almacenamiento<a class="headerlink" href="#niveles-de-almacenamiento" title="Permanent link">&para;</a></h4>
+<p>Niveles de acceso al dato.</p>
+<table>
+<thead>
+<tr>
+<th>Frecuente</th>
+<th>Poco frecuente</th>
+<th>Archivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datos con acceso regular y activo</td>
+<td>Datos con acceso ocasional (≥30 días)</td>
+<td>Datos fríos o archivados (≥180 días)</td>
+</tr>
+<tr>
+<td>Mayor coste de almacenamiento</td>
+<td>Coste intermedio</td>
+<td>Muy bajo coste de almacenamiento</td>
+</tr>
+<tr>
+<td>Bajo coste de acceso</td>
+<td>Coste moderado de acceso</td>
+<td>Alto coste de acceso y recuperación lenta</td>
+</tr>
+</tbody>
+</table>
+<h3 id="servicios-de-bases-de-datos">Servicios de bases de datos<a class="headerlink" href="#servicios-de-bases-de-datos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Tipo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CosmosDB</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Base de datos NoSQL distribuida globalmente, con baja latencia y alta disponibilidad.</td>
+</tr>
+<tr>
+<td><strong>Azure SQL Db</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Base de datos relacional gestionada basada en SQL Server.</td>
+</tr>
+<tr>
+<td><strong>ADB for MySQL</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Servicio de base de datos MySQL totalmente gestionado en la nube.</td>
+</tr>
+<tr>
+<td><strong>ADB for PostgreSQL</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Servicio de base de datos PostgreSQL totalmente gestionado.</td>
+</tr>
+<tr>
+<td><strong>SQL Managed Instance</strong></td>
+<td><strong><em>PaaS</em></strong></td>
+<td>Instancia de SQL Server con alta compatibilidad, ideal para migraciones.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="azure-marketplace">Azure Marketplace<a class="headerlink" href="#azure-marketplace" title="Permanent link">&para;</a></h3>
+<p>Azure Marketplace es una plataforma en la que puedes <strong>descubrir, probar y adquirir</strong> soluciones de terceros que se integran con los servicios de Azure.</p>
+<ul>
+<li><strong>Máquinas virtuales preconfiguradas</strong> (con software ya instalado)</li>
+<li><strong>Aplicaciones empresariales</strong> (CRM, ERP, seguridad, backup, etc.)</li>
+<li><strong>Sistemas operativos</strong> (Linux, Windows Server, etc.)</li>
+<li><strong>Bases de datos</strong> y middlewares</li>
+<li><strong>Contenedores</strong>, plantillas ARM y servicios gestionados</li>
+</ul>
+<p>Permite desplegar soluciones listas para usar con unos pocos clics, muchas de ellas con soporte oficial del proveedor.</p>
+<h3 id="politicas-de-redundancia-de-backup-en-azure">Políticas de redundancia de backup en Azure<a class="headerlink" href="#politicas-de-redundancia-de-backup-en-azure" title="Permanent link">&para;</a></h3>
+<p>Azure Backup permite elegir entre diferentes opciones de redundancia para almacenar los datos en los cofres de Recovery Services. Esta configuración afecta al nivel de durabilidad, coste y resiliencia frente a fallos.</p>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Copias</th>
+<th>Región secundaria</th>
+<th>Lectura desde región secundaria</th>
+<th>Coste</th>
+<th>Soportado por Azure Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LRS</td>
+<td>3 copias en un datacenter</td>
+<td>No</td>
+<td>No</td>
+<td>Bajo</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>ZRS</td>
+<td>3 copias en zonas de una región</td>
+<td>No</td>
+<td>No</td>
+<td>Medio</td>
+<td>Parcial (según servicio)</td>
+</tr>
+<tr>
+<td>GRS</td>
+<td>3 copias + réplica geográfica</td>
+<td>Sí (asíncrona)</td>
+<td>No</td>
+<td>Alto</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>RA-GRS</td>
+<td>3 copias + réplica geográfica</td>
+<td>Sí (asíncrona)</td>
+<td>Sí</td>
+<td>Más alto</td>
+<td>No</td>
+</tr>
+<tr>
+<td>GZRS</td>
+<td>Copias en zonas + réplica geográfica</td>
+<td>Sí (asíncrona)</td>
+<td>No</td>
+<td>Alto</td>
+<td>No</td>
+</tr>
+<tr>
+<td>RA-GZRS</td>
+<td>Zonas + réplica geográfica</td>
+<td>Sí (asíncrona)</td>
+<td>Sí</td>
+<td>Más alto</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lrs-locally-redundant-storage">LRS - Locally Redundant Storage<a class="headerlink" href="#lrs-locally-redundant-storage" title="Permanent link">&para;</a></h4>
+<p>Replica los datos tres veces dentro de una única región física (mismo datacenter).<br />
+Es la opción más económica, pero no protege frente a desastres regionales.<br />
+Adecuado cuando el coste es prioritario y la pérdida de datos regionales es aceptable.</p>
+<h4 id="zrs-zone-redundant-storage">ZRS - Zone-Redundant Storage<a class="headerlink" href="#zrs-zone-redundant-storage" title="Permanent link">&para;</a></h4>
+<p>Replica sincrónicamente los datos entre tres zonas de disponibilidad dentro de una misma región.<br />
+Ofrece alta disponibilidad frente a fallos zonales.<br />
+No siempre está disponible en servicios de backup. Verificar soporte actualizado.</p>
+<h4 id="grs-geo-redundant-storage">GRS - Geo-Redundant Storage<a class="headerlink" href="#grs-geo-redundant-storage" title="Permanent link">&para;</a></h4>
+<p>Replica los datos tres veces en la región primaria y los copia de forma asíncrona a una región secundaria geográfica.<br />
+Aporta alta durabilidad incluso en escenarios de desastre regional.<br />
+Es la opción recomendada por defecto en la mayoría de escenarios críticos de backup.</p>
+<h4 id="ra-grs-read-access-geo-redundant-storage">RA-GRS - Read-Access Geo-Redundant Storage<a class="headerlink" href="#ra-grs-read-access-geo-redundant-storage" title="Permanent link">&para;</a></h4>
+<p>Igual que GRS, pero permite el acceso de solo lectura a los datos desde la región secundaria.<br />
+Aporta disponibilidad de lectura adicional en caso de fallo en la región principal.<br />
+Azure Backup no admite esta opción; solo están disponibles LRS y GRS.</p>
+<h4 id="gzrs-geo-zone-redundant-storage">GZRS - Geo-Zone-Redundant Storage<a class="headerlink" href="#gzrs-geo-zone-redundant-storage" title="Permanent link">&para;</a></h4>
+<p>Combina replicación entre zonas dentro de la región primaria con replicación geográfica a una región secundaria.<br />
+Diseñado para alta disponibilidad local más recuperación ante desastres regionales.<br />
+No disponible actualmente en Azure Backup.</p>
+<h4 id="ra-gzrs-read-access-geo-zone-redundant-storage">RA-GZRS - Read-Access Geo-Zone-Redundant Storage<a class="headerlink" href="#ra-gzrs-read-access-geo-zone-redundant-storage" title="Permanent link">&para;</a></h4>
+<p>Extiende GZRS permitiendo lectura desde la región secundaria.<br />
+Ofrece máxima durabilidad y disponibilidad.<br />
+No soportado por Azure Backup.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Copyright &copy; Carlos Grande - 2025
+                </div>
+                
+            </div>
+            
+            <div class="md-social">
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.path", "navigation.tracking", "navigation.tabs", "navigation.instant", "navigation.sections", "navigation.footer", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown.js"></script>
+      
+        <script src="../../../assets/javascripts/quizdown_init.js"></script>
+      
+    
+  </body>
+</html>
